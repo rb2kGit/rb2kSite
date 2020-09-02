@@ -1,0 +1,21 @@
+{
+  "name": "rb2ksite",
+  "version": "1.0.0",
+  "description": "Personal profile site.",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "client-sessions": "^0.8.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mongodb": "^3.6.0",
+    "node": "^14.8.0",
+    "randomstring": "^1.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arber Shpiragu",
+  "license": "ISC"
+}

@@ -1,0 +1,61 @@
+#header_div{
+    background-color: #00ace6;
+}
+
+#header_menu_table{
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    color: white;
+}
+
+#name_cell{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+}
+
+#panel1_div{
+    color: white;
+    background-color: #00ace6;
+    text-align: right;
+    position: relative;
+    height: 750px;
+    background-image: url(/images/dante_website.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#intro_text_div{
+    text-align: left;
+    position: absolute;
+    margin-left: 15%;
+
+    border: solid;
+    border-color: black;
+}
+
+#dante_image{
+    height: 100%;
+}
+
+#panel2_div{
+    text-align: center;
+    color: white;
+    height: 750px;
+    background-image: url(/images/night_sky.jpg);
+}
+
+#panel3_div{
+    text-align: center;
+    height: 250px;
+}
+
+#panel4_div{
+    height: 750px;
+    background-image: url(/images/code_back.jpg);
+}
+
+/*
+border: solid;
+border-color: black;
+*/

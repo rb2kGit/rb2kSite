@@ -1,3 +1,6 @@
+body{
+    margin: 0px;
+}
 #header_div{
     background-color: #00ace6;
 }
@@ -15,27 +18,34 @@
 }
 
 #panel1_div{
-    color: white;
+    width: 100%;
+    overflow: hidden;
     background-color: #00ace6;
-    text-align: right;
-    position: relative;
     height: 750px;
-    background-image: url(/images/dante_website.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #intro_text_div{
     text-align: left;
     position: absolute;
-    margin-left: 15%;
+    color: white;
+    top: 15%;
+    left: 15%;
 
     border: solid;
     border-color: black;
 }
 
-#dante_image{
-    height: 100%;
+#intro_image_div{
+    position: absolute;
+    height: inherit;
+    right: -0px;
+    overflow: hidden;
+    max-width: 150%;
+}
+
+#landing_image{
+    max-height: 100%;
+    overflow: hidden;
 }
 
 #panel2_div{

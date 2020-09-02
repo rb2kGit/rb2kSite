@@ -1,6 +1,12 @@
 body{
     margin: 0px;
 }
+
+.landingPanel{
+    width: 100%;
+    overflow: hidden;
+    height: 750px;
+}
 #header_div{
     background-color: #00ace6;
 }
@@ -18,21 +24,20 @@ body{
 }
 
 #panel1_div{
-    width: 100%;
-    overflow: hidden;
     background-color: #00ace6;
-    height: 750px;
 }
 
 #intro_text_div{
     text-align: left;
     position: absolute;
     color: white;
-    top: 15%;
+    top: 25%;
     left: 15%;
+}
 
-    border: solid;
-    border-color: black;
+#landing_header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 42px;
 }
 
 #intro_image_div{

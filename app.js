@@ -28,9 +28,18 @@ app.use(session({
     ephemeral: true
 }))
 
+//App functions.
+function adj_array(){
+    var adjectiveArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Fresh", "Invigorating", 
+    "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", "Enthusiastic", "Tireless"];
+    return adjectiveArray[Math.floor(Math.random() * adjectiveArray.length)]
+}
+
 //Routes
 app.get("/", (req, res) => {
-    res.render("landing")
+    var adj = adj_array()
+
+    res.render("landing", {adj} )
 })
 
 //Ports

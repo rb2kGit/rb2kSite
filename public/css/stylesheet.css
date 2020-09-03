@@ -8,7 +8,7 @@ body{
     height: 750px;
 }
 #header_div{
-    background-color: #00ace6;
+    background-color: #54acc7;
 }
 
 #header_menu_table{
@@ -24,14 +24,15 @@ body{
 }
 
 #panel1_div{
-    background-color: #00ace6;
+    background-color: #54acc7;
+    /*background-color: #00ace6;*/
 }
 
 #intro_text_div{
     text-align: left;
     position: absolute;
     color: white;
-    top: 25%;
+    top: 35%;
     left: 15%;
 }
 
@@ -43,7 +44,7 @@ body{
 #intro_image_div{
     position: absolute;
     height: inherit;
-    right: -0px;
+    right: 15%;
     overflow: hidden;
     max-width: 150%;
 }
@@ -57,7 +58,7 @@ body{
     text-align: center;
     color: white;
     height: 750px;
-    background-image: url(/images/night_sky.jpg);
+    background-image: url(/images/galaxy_background.jpg);
 }
 
 #panel3_div{

@@ -36,8 +36,9 @@ body{
 }
 
 #name_cell{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 32px;
+    color: #0063a8;
 }
 
 #panel1_div{
@@ -83,19 +84,12 @@ body{
     max-width: 45%;
     text-align: left;
     position: absolute;
-    left: 15%;
-}
-
-#about_text_header{
-    text-decoration: underline;
-    font-size: 35px;
-    font-style: normal;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    left: 2%;
 }
 
 #about_text{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
 }
 
 #photo_credit_div{

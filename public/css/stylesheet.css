@@ -2,6 +2,11 @@ body{
     margin: 0px;
 }
 
+a:link, a:visited{
+    text-decoration: none;
+    color: #f4ebc1;
+}
+
 /*Classes*/
 .centered_vertical{
     margin: 0;
@@ -47,14 +52,13 @@ body{
 }
 
 #header_div{
-    background-color: #54acc7;
+    background-color: #40a8c4;
 }
 
 #header_menu_table{
     text-align: center;
     width: 85%;
     margin: auto;
-    color: white;
 }
 
 #name_cell{
@@ -64,7 +68,8 @@ body{
 }
 
 #panel1_div{
-    background-color: #54acc7;
+    background-color: #40a8c4;
+    /* #54acc7;*/
     height: 650px;
     /*background-color: #00ace6;*/
 }
@@ -72,7 +77,7 @@ body{
 #intro_text_div{
     text-align: left;
     position: absolute;
-    color: #1d382e;
+    color: white;
     top: 35%;
     left: 15%;
 }
@@ -93,6 +98,8 @@ body{
 #landing_image{
     max-height: 100%;
     overflow: hidden;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 
 #panel2_div{

@@ -36,6 +36,24 @@ app.get("/", (req, res) => {
 app.get("/rb2ksite", (req, res) => {
     res.render("rb2ksite_page")
 })
+app.get("/pongsite", (req, res) => {
+    res.render("pong_page")
+})
+app.get("/leaguesite", (req, res) => {
+    res.render("league_page")
+})
+app.get("/javasite", (req, res) => {
+    res.render("java_page")
+})
+app.get("/csite", (req, res) => {
+    res.render("c_page")
+})
+app.get("/flappysite", (req, res) => {
+    res.render("flappy_page")
+})
+app.get("/servicesite", (req, res) => {
+    res.render("services_page")
+})
 
 app.get("*", (req, res) => {
     res.redirect("/")

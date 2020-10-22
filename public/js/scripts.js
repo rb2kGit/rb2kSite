@@ -1,11 +1,21 @@
-let navItems = document.querySelectorAll('.header_nav_links');
+let navText = document.querySelectorAll('.header_nav_links')
 let burger = document.querySelector('.burger')
 let mnav = document.querySelector('.mobile_nav')
 let flair = document.querySelector('#flair_text')
-let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Fresh", "Invigorating", 
-"Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", "Enthusiastic", "Tireless"]
+let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", 
+"Enthusiastic", "Tireless", "Insightful", "Decisive"]
 let randomFlair =  flairArray[Math.floor(Math.random() * flairArray.length)]
 let flairTimer = setInterval(flairTransition, 5000)
+
+//Header scripts
+navText.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+        item.classList.add('hovered_nav_item')
+    })
+    item.addEventListener('mouseleave', () => {
+        item.classList.remove('hovered_nav_item')
+    })
+})
 
 burger.addEventListener("click", () => {
     mnav.classList.toggle('nav_active')
@@ -39,14 +49,7 @@ flair.addEventListener('click', () => {
     flairTimer = setInterval(flairTransition, 5000)
 })
 
-navItems.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.classList.add('hovered_nav_item')
-    })
-    item.addEventListener('mouseleave', () => {
-        item.classList.remove('hovered_nav_item')
-    })
-})
+
 
 //Parallax script
 let parallaxDiv = document.querySelector("#panel2_div");
@@ -56,7 +59,6 @@ window.addEventListener("scroll", () => {
 })
 
 let wnButton = document.querySelector(".whats_new_button");
-console.log(wnButton)
 
 wnButton.addEventListener('mouseover', () => {
     console.log(wnButton.classList)

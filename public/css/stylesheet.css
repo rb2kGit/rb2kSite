@@ -27,11 +27,16 @@ a:link, a:visited{
     background-color: #40a8c4;
 }
 .nav_links_container{
-    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100%;
+}
+.rb2k_logo{
+    height: 45px;
+    width: 45px;
 }
 .header_nav_links{
     color: #f4ebc1;
@@ -41,7 +46,6 @@ a:link, a:visited{
 }
 .hovered_nav_item{
     color: white;
-    transform: scale(2);
 }
 .burger{
     padding: 5px;
@@ -84,8 +88,6 @@ a:link, a:visited{
 .nav_active{
     transform: translateX(0%)
 }
-
-
 
 /*Landing Page CSS*/
 .image_panel{
@@ -148,7 +150,6 @@ a:link, a:visited{
     margin: 10px;
     text-align: center;
 }
-
 .social_image_link{
     max-width: 75px;
     max-height: 75px;
@@ -192,14 +193,272 @@ a:link, a:visited{
 }
 .about_text{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 20px;
+}
+#panel3_div{
+    background-color: #66d1aa;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
+}
+
+
+/*Projects CSS*/
+.p4_grid_container{
+    display: grid;
+    grid-template-areas: 
+        'project1 project1 project2 project2 project2 project2'
+        'project1 project1 project2 project2 project2 project2'
+        'project1 project1 project3 project3 project3 project4'
+        'project5 project6 project6 project6 project6 project4'
+        'project5 project6 project6 project6 project6 project4';
+    height: 750px;
+    width: 100%;
+    gap: 20px;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
+}
+.p4_grid_element1{
+    grid-area: project1;
+    background-image: url(/images/site_image.png);
+    background-position:  center;
+    background-size: cover;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.hidden_overlay_1{
+    background-color: white;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 1s all ease;
+}
+.hidden_items1{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.p4_grid_element2{
+    grid-area: project2;
+    background-image: url(/images/pong_image.png);
+    background-position:  left center;
+    background-size: cover;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.hidden_overlay_2{
+    background-color: white;
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.hidden_items2{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.p4_grid_element3{
+    grid-area: project3;
+    background-image: url(/images/nv_image.png);
+    background-position:  left bottom;
+    background-size: cover;
+    cursor: pointer;
+}
+.hidden_overlay_3{
+    background-color: white;
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.hidden_items3{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.p4_grid_element4{
+    grid-area: project4;
+    background-image: url(/images/jav_image.png);
+    background-position:  left bottom;
+    background-size: cover;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.hidden_overlay_4{
+    background-color: white;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 1s all ease;
+}
+.hidden_items4{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+
+.p4_grid_element5{
+    grid-area: project5;
+    background-image: url(/images/cpp_image.png);
+    background-position:  left bottom;
+    background-size: cover;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.hidden_overlay_5{
+    background-color: white;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 1s all ease;
+}
+.hidden_items5{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.p4_grid_element6{
+    grid-area: project6;
+    background-image: url(/images/fbird_image.png);
+    background-position:  left top;
+    background-size: cover;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.hidden_overlay_6{
+    background-color: white;
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.hidden_items6{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s all ease;
+}
+.content_div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.grid_header_div{
+    width: 90%;
+    position: absolute;
+    margin: 10px;
+}
+.grid_header{
+    color: #f4ebc1;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+.hidden_info_container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+.hidden_text{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.hidden_break{
+    border: solid 1px black;
+    margin: 5px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#hidden_break_white{
+    border: solid 1px white;
+}
+.hidden_button_link{
+    margin: auto;
+}
+.hidden_button{
+    border: solid 1px grey;
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.overlay_reveal{
+    height: 100%;
+    width: 100%;
+    pointer-events: all;
+    opacity: 0.85;
+}
+.items_reveal{
+    opacity: 1;
+    pointer-events: all;
+}
+#item3_header{
+    bottom: 0px;
+}
+#fbird_header{
+    bottom: 0px;
 }
 
 /*Project Info Page CSS*/
 .project_info_container{
     display: flex;
     flex-direction: column;
-    border-top: solid 1px grey;
+    border-top: solid 2px grey;
 }
 #project_break{
     margin: auto;
@@ -225,14 +484,29 @@ a:link, a:visited{
     margin: 0px;
 }
 .project_text_div{
-    width: 75%;
     margin: auto;
     padding: 10%;
     border: solid 1px grey;
     border-radius: 5px;
 }
+.project_link_div{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    padding: 5%;
+    border: solid 1px grey;
+    border-radius: 5px;
+    text-align: center;
+}
 .project_text{
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+}
+.project_link{
+    margin: 10px;
 }
 #tools_text{
     text-align: center;
@@ -263,272 +537,144 @@ a:link, a:visited{
     margin: 0;
 }
 
-.p4_grid_container{
-    display: grid;
-    grid-template-areas: 
-        'project1 project1 project2 project2 project2 project2'
-        'project1 project1 project2 project2 project2 project2'
-        'project1 project1 project3 project3 project3 project4'
-        'project5 project6 project6 project6 project6 project4'
-        'project5 project6 project6 project6 project6 project4';
-    height: 750px;
-    width: 100%;
-    gap: 20px;
-    -webkit-filter: drop-shadow(10px 10px 10px #222222);
-    filter: drop-shadow(10px 10px 10px #222222);
-}
-
-/*Grid classes*/
-.p4_grid_element1{
-    grid-area: project1;
-    background-image: url(/images/site_image.png);
-    background-position:  left bottom;
-    background-size: cover;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-.hidden_overlay_1{
-    background-color: white;
-    height: 0px;
-    width: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: 1s all ease;
-}
-.hidden_items1{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-
-.p4_grid_element2{
-    grid-area: project2;
-    background-image: url(/images/pong_image.png);
-    background-position:  left center;
-    background-size: cover;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-.hidden_overlay_2{
-    background-color: white;
-    height: 100%;
-    width: 0px;
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-.hidden_items2{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-
-.p4_grid_element3{
-    grid-area: project3;
-    background-image: url(/images/nv_image.png);
-    background-position:  left bottom;
-    background-size: cover;
-}
-.hidden_overlay_3{
-    background-color: white;
-    height: 100%;
-    width: 0px;
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-.hidden_items3{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-
-.p4_grid_element4{
-    grid-area: project4;
-    background-image: url(/images/jav_image.png);
-    background-position:  left bottom;
-    background-size: cover;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-.hidden_overlay_4{
-    background-color: white;
-    height: 0px;
-    width: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: 1s all ease;
-}
-.hidden_items4{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-
-.p4_grid_element5{
-    grid-area: project5;
-    background-image: url(/images/cpp_image.png);
-    background-position:  left bottom;
-    background-size: cover;
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
-.hidden_overlay_5{
-    background-color: white;
-    height: 0px;
-    width: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: 1s all ease;
-}
-.hidden_items5{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-
-.p4_grid_element6{
-    grid-area: project6;
-    background-image: url(/images/fbird_image.png);
-    background-position:  left top;
-    background-size: cover;
-    margin-bottom: 20px;
-}
-.hidden_overlay_6{
-    background-color: white;
-    height: 100%;
-    width: 0px;
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-.hidden_items6{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s all ease;
-}
-
-.content_div{
-    width: 100%;
-    height: 100%;
+/*Contact CSS*/
+#panel5_div{
+    background-color: #54acc7;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
-
-.grid_header_div{
-    width: 90%;
+.contact_panel{
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.contact_block{
+    margin: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    height: 100%;
+}
+.contact_text_div{
     position: absolute;
-    margin: 10px;
+    width: 100%;
 }
-.grid_header{
+.contact_text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.contact_header{
+    font-size: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact_p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+.contact_link{
     color: #f4ebc1;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0px;
 }
-
-.hidden_info_container{
+.contact_image_div{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: absolute;
+}
+.image_overlay{
+    background: gray;
+    opacity: 0.3;
     width: 100%;
     height: 100%;
+    position: absolute;
+}
+.contact_image{
+    height: 100%;
+}
+
+/*Services CSS*/
+.services_items{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.services_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 35%;
+    z-index: 1;
+}
+.services_header{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: white;
+    z-index: 2;
+}
+.services_link_div{
     position: relative;
     display: flex;
-}
-
-.hidden_text{
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.hidden_break{
-    border: solid 1px black;
-    margin: 5px;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-#hidden_break_white{
-    border: solid 1px white;
-}
-.hidden_button{
-    border: solid 1px black;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.overlay_reveal{
-    height: 100%;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    pointer-events: all;
-    opacity: 0.85;
+    height: 50%;
+    border: solid 1px black;
 }
-.items_reveal{
-    opacity: 1;
-    pointer-events: all;
+.services_link{
+    z-index: 2;
 }
+.services_button{
+    margin: auto;
+    max-width: 200px;
+    max-height: 75px;
+    border: 1px solid #40a8c4;
+    border-radius: 5px;
+    background-color: #40a8c4;
+    color: #f4ebc1;
+    font-family: arial;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 10px 10px 20px black;
+    z-index: 1;
+}
+
+/*Footer CSS*/
+.footer_container{
+    width: 100%;
+    height: 100%;
+    background-color: darkgray;
+}
+
+
+
+
 
 /*Element IDs*/
 #header_div{
     background-color: #40a8c4;
 }
 
-#header_menu_table{
-    text-align: center;
-    width: 85%;
-    margin: auto;
-}
+
 
 #name_header{
     margin: 0;
     padding: 0;
     font-family: 'Arial Narrow', Arial, sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     color: white;
+    letter-spacing: 3px;
 }
 
 #panel1_div{
@@ -638,49 +784,16 @@ a:link, a:visited{
     margin: 10px;
 }
 
-/*About Panel CSS*/
-#panel3_div{
-    background-color: #66d1aa;
-    -webkit-filter: drop-shadow(10px 10px 10px #222222);
-    filter: drop-shadow(10px 10px 10px #222222);
-}
-
-
-
-
-
-
-
-
-
-
-
-#item3_header{
-    bottom: 0px;
-}
-#fbird_header{
-    bottom: 0px;
-}
-
-
 #about_text{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
-#panel5_div{
-    background-color: #54acc7;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
+
 
 #site_header{
-    background-color: gray;
-    border-radius: 5px;
     padding: 2px;
-    width: 33%;
-    text-align: center;
+    text-align: left;
 }
 
 #panel6_div{
@@ -689,62 +802,10 @@ a:link, a:visited{
     background-size: cover;
 }
 
-.contact_panel{
-    position: relative;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
-.contact_block{
-    margin: auto;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    text-align: center;
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    height: 100%;
-}
-.contact_text_div{
-    position: absolute;
-    width: 100%;
-}
-.contact_text{
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-.contact_header{
-    font-size: 3vw;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.contact_p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-}
-.contact_link{
-    color: #f4ebc1;
-}
-.contact_image_div{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    position: absolute;
-}
-.image_overlay{
-    background: gray;
-    opacity: 0.3;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.contact_image{
-    height: 100%;
-}
+
 
 @media screen and (max-width: 850px){
+    /*Nav Header*/
     .header_nav_links{
         display: none;
     }
@@ -757,6 +818,8 @@ a:link, a:visited{
     .mobile_nav{
         display: flex;
     }
+
+    /*What's New*/
     .social_text{
         display: none;
     }
@@ -766,6 +829,9 @@ a:link, a:visited{
         margin: 5%;
         z-index: 1;
     }
+
+    /*Projects*/
+
     .p4_grid_container{
         display: grid;
         grid-template-areas: 
@@ -775,10 +841,75 @@ a:link, a:visited{
             'project4'
             'project5'
             'project6';
-        height: 750px;
+        height: 1500px;
         width: 100%;
-        gap: 5px;
         -webkit-filter: drop-shadow(10px 10px 10px #222222);
         filter: drop-shadow(10px 10px 10px #222222);
+    }
+    .p4_grid_element1{
+        grid-area: project1;
+        background-image: url(/images/site_image.png);
+        background-position:  center;
+        background-size: cover;
+        margin-top: 20px;
+        margin-bottom: 7px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .p4_grid_element2{
+        grid-area: project2;
+        background-image: url(/images/pong_image.png);
+        background-position:  left center;
+        background-size: cover;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .p4_grid_element3{
+        grid-area: project3;
+        background-image: url(/images/nv_image.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .p4_grid_element4{
+        grid-area: project4;
+        background-image: url(/images/jav_image.png);
+        background-position:  left bottom;
+        background-size: cover;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .p4_grid_element5{
+        grid-area: project5;
+        background-image: url(/images/cpp_image.png);
+        background-position:  left bottom;
+        background-size: cover;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .p4_grid_element6{
+        grid-area: project6;
+        background-image: url(/images/fbird_image.png);
+        background-position:  left top;
+        background-size: cover;
+        margin-top: 7px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /*Contact CSS*/
+    .contact_panel{
+        width: 10%;
     }
 }

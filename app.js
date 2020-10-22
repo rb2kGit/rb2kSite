@@ -12,7 +12,7 @@ const session = require("client-sessions");
 //App declarations.
 app.engine("handlebars", expressHB({defaultLayout: 'default'}))
 app.set("view engine", "handlebars")
-app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, "/public")))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
@@ -28,18 +28,17 @@ app.use(session({
     ephemeral: true
 }))
 
-//App functions.
-function adj_array(){
-    var adjectiveArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Fresh", "Invigorating", 
-    "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", "Enthusiastic", "Tireless"];
-    return adjectiveArray[Math.floor(Math.random() * adjectiveArray.length)]
-}
-
 //Routes
 app.get("/", (req, res) => {
-    var adj = adj_array()
+    res.render("landing")
+})
 
-    res.render("landing", {adj} )
+app.get("/rb2ksite", (req, res) => {
+    res.render("rb2ksite_page")
+})
+
+app.get("*", (req, res) => {
+    res.redirect("/")
 })
 
 //Ports

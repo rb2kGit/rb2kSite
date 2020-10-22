@@ -1,24 +1,109 @@
-<article>
+<body>
     <div id="panel1_div" class="text_panel">
         <div id="intro_image_div">
             <img id="landing_image" src="/images/arby_ic.png">
         </div>
         <div id="intro_text_div">
-            <p id="landing_header">Arby Is {{adj}}</p>
+            <p id="landing_header">Arby Is <span id="flair_text">Smart</span></p>
         </div>
     </div>
+    
     <div id="panel2_div" class="image_panel">
-        <div id="panel2_button_div" class="centered_vertical">
-            <button id="whats_new_button" class="centered_vertical">What's New?</button>
+        <div class="news_elements">
+            <div class="social_items_div"></div>
+            <div class="social_header_div">
+                <h2 id="social_header_text">Check out my socials to see what's new.</h2>
+            </div>
+            <div id="social_div" class="social_grid_container">
+                <div class="social_grid_element">
+                    <div class="social_items_div">
+                        <div class="social_node" id="facebook_node">
+                            <a href="https://www.facebook.com/rb2kfb">
+                                <img src="/images/facebook.png" class="social_image_link">
+                            </a> 
+                        </div>
+                        <p class="social_text">Arby Shpiragu</p>
+                    </div>
+                </div>
+                <div class="social_grid_element" id="instagram_node">
+                    <div class="social_items_div">
+                        <div class="social_node">
+                            <a href="https://www.instagram.com/arbyshpiragu/?hl=en">
+                                <img src="/images/instagram.png" class="social_image_link">
+                            </a>
+                        </div>
+                        <p class="social_text">@arbyshpiragu</p>
+                    </div>
+                </div>
+                <div class="social_grid_element" id="github_node">
+                    <div class="social_items_div">
+                        <div class="social_node">
+                            <a href="https://github.com/rb2kGit">
+                                <img src="/images/github.png" class="social_image_link">
+                            </a>
+                        </div>
+                        <p class="social_text">rb2kGit</p>
+                    </div>
+                </div>
+                <div class="social_grid_element" id="linkedin_node">
+                    <div class="social_items_div">
+                        <div class="social_node">
+                            <a href="https://www.linkedin.com/in/arber-shpiragu-7544b319a/">
+                                <img src="/images/linkedin.png" class="social_image_link">
+                            </a>
+                        </div>
+                        <p class="social_text">Arber Shpiragu</p>
+                    </div>
+                </div>
+                <div class="social_grid_element" id="twitter_node">
+                    <div class="social_items_div">
+                        <div class="social_node">
+                            <a href="https://twitter.com/rb2ktwtr">
+                                <img src="/images/twitter.png" class="social_image_link">
+                            </a>
+                        </div>
+                        <p class="social_text">@rb2ktwtr</p>
+                    </div>
+                </div>
+                <div class="social_grid_element" id="youtube_node">
+                    <div class="social_items_div">
+                        <div class="social_node">
+                            <a href="https://www.youtube.com/channel/UC_NCy389xQNx1iSQgYteErA">
+                                <img src="/images/youtube.png" class="social_image_link">
+                            </a>
+                        </div>
+                        <p class="social_text">rb2kPro</p>
+                    </div>
+                </div>
+                <div class="social_grid_element">
+                    <div class="social_items_div">
+                        <div class="social_node">
+                            <a href="https://www.facebook.com/">
+                                <img src="/images/indeed.jpg" class="social_image_link">
+                            </a>
+                        </div>
+                        <p class="social_text">Arber Shpiragu</p>
+                    </div>
+                </div>
+            </div>
+            <div id="wn_button_div">
+                <button class="whats_new_button">What's New?</button>
+            </div>
         </div>
-        <div id="photo_credit_div">
-            <span>Photo by <a href="https://unsplash.com/@r3dmax?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonatan Pie</a> 
-            on <a href="https://unsplash.com/s/photos/aurora?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        <div class="photo_credit_div">
+            <span>Photo by <a class="credit_link" href="https://unsplash.com/@r3dmax?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonatan Pie</a> 
+            on <a class="credit_link" href="https://unsplash.com/s/photos/aurora?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
         </div>
     </div>
+
     <div id="panel3_div" class="text_panel">
-        <div id="about_text_div" class="centered_vertical">
-            <p id="about_text">
+        <div class="about_container_div">
+            <div class="about_image_div">
+                <img src="/images/arby_ic.png" class="about_image">
+            </div>
+        <div class="about_text_div">
+            <h2 class="about_header">About Me</h2>
+            <p class="about_text">
                 I am an entrepreneur and programmer based in Toronto. For over a decade I have owned and managed a small business focused on project management and skilled trades.
                 <br>
                 <br>
@@ -35,24 +120,130 @@
                 yourself is through learning and surrounding yourself with people who will influence you positively.
             </p>
         </div>
+        </div>
     </div>
     <div id="panel4_div">
-        <div id="panel4_grid_container" class="grid_container">
-            <div id="grid_element1" class="grid_element">1</div>
-            <div id="grid_element2" class="grid_element">2</div>
-            <div id="grid_element3" class="grid_element">3</div>
-            <div id="grid_element4" class="grid_element">4</div>
-            <div id="grid_element5" class="grid_element">5</div>
-            <div id="grid_element6" class="grid_element">6</div>
+        <div id="panel4_grid_container" class="p4_grid_container">
+            <div class="p4_grid_element1">
+                <div class="content_div">    
+                    <div class="grid_header_div">
+                        <h3 class="grid_header" id="site_header">This Site</h3>
+                    </div>
+                    <div class="hidden_overlay_1"></div>
+                    <div class="hidden_info_container">
+                        <div class="hidden_items1 centered_vertical">
+                            <p class="hidden_text">I built this website to be an introduction of myself and a portfolio of my programming skills
+                                and work experience.
+                            </p>
+                            <div class="hidden_break"></div>
+                            <p class="hidden_text">Node.js | Express | Handlebars | HTML | CSS</p>
+                            <a class="hidden_button" href="/rb2ksite">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p4_grid_element2">
+                <div class="content_div">    
+                    <div class="grid_header_div">
+                        <h3 class="grid_header">Retro Pong</h3>
+                    </div>
+                    <div class="hidden_overlay_2"></div>
+                    <div class="hidden_info_container">
+                        <div class="hidden_items2 centered_vertical">
+                            <p class="hidden_text">A Pong game made in a retro style, true to its inspiration.</p>
+                            <div class="hidden_break"></div>
+                            <p class="hidden_text">Lua | Love2D</p>
+                            <a class="hidden_button" href="https://www.google.com/">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p4_grid_element3">
+                <div class="content_div">    
+                    <div class="grid_header_div" id="item3_header">
+                        <h3 class="grid_header" id="site_header">TCG League Project</h3>
+                    </div>
+                    <div class="hidden_overlay_3"></div>
+                    <div class="hidden_info_container">
+                        <div class="hidden_items3 centered_vertical">
+                            <p class="hidden_text">A web app that handles statistic and prize tracking built for a local group of card players.</p>
+                            <div class="hidden_break"></div>
+                            <a class="hidden_button" href="https://www.google.com/">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p4_grid_element4">
+                <div class="content_div">    
+                    <div class="grid_header_div">
+                        <h3 class="grid_header">Java Matrix</h3>
+                    </div>
+                    <div class="hidden_overlay_4"></div>
+                    <div class="hidden_info_container">
+                        <div class="hidden_items4 centered_vertical">
+                            <p class="hidden_text">A command line Java program that traverses a matrix to retrieve a value.</p>
+                            <div class="hidden_break"></div>
+                            <p class="hidden_text">Java</p>
+                            <a class="hidden_button" href="https://www.google.com/">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p4_grid_element5">
+                <div class="content_div">    
+                    <div class="grid_header_div">
+                        <h3 class="grid_header">Student Hash Table</h3>
+                    </div>
+                    <div class="hidden_overlay_5"></div>
+                    <div class="hidden_info_container">
+                        <div class="hidden_items5 centered_vertical">
+                            <p class="hidden_text">A command line program that stores student information in a has table and allows for traversal of data.</p>
+                            <div class="hidden_break"></div>
+                            <p class="hidden_text">C++</p>
+                            <a class="hidden_button" href="https://www.google.com/">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p4_grid_element6">
+                <div class="content_div">    
+                    <div class="grid_header_div" id="fbird_header">
+                        <h3 class="grid_header">Flappy Bird Remake</h3>
+                    </div>
+                    <div class="hidden_overlay_6"></div>
+                    <div class="hidden_info_container">
+                        <div class="hidden_items6 centered_vertical">
+                            <p class="hidden_text">Flappy Bird made with keyboard controls done in a retro style, true to its inspiration.</p>
+                            <div class="hidden_break"></div>
+                            <p class="hidden_text">Lua | Love2D</p>
+                            <a class="hidden_button" href="https://www.google.com/">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="panel5_div" class="image_panel">
-    </div>
-    <div id="panel6_div" class="text_panel">
-        <div id="contact_block">
-            <h1>Contact</h1>
-            <p>email</p>
-            <p>phone</p>
+    <div id="panel5_div" class="text_panel">
+        <div class="contact_panel">
+        </div>
+        <div class="contact_block">
+            <div class="contact_image_div">
+                <div class="image_overlay"></div>
+                <img class="contact_image" src="/images/arby_ic.png">
+            </div>
+            <div class="image_overlay"></div>
+            <div class="contact_text_div centered_vertical">
+                <div class="contact_text">
+                    <h1 class="contact_header">CONTACT ME</h1>
+                    <div class="hidden_break" id="hidden_break_white"></div>
+                    <p class="contact_p">EMAIL | <a class="contact_link" href="mailto:rb2kPro@gmail.com">RB2KPRO@GMAIL.COM</a></p>
+                    <p class="contact_p">PHONE | <a>+1 (647) 892 - 2729</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="contact_panel">
         </div>
     </div>
-</article>
+    <div id="panel6_div" class="image_panel">
+    </div>
+</body>

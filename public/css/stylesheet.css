@@ -27,8 +27,8 @@ a:link, a:visited{
     background-color: #40a8c4;
 }
 .nav_links_container{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -684,7 +684,7 @@ a:link, a:visited{
     margin: 0;
     padding: 0;
     font-family: 'Arial Narrow', Arial, sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     color: white;
     letter-spacing: 3px;
 }
@@ -731,13 +731,13 @@ a:link, a:visited{
 }
 
 #intro_image_div{
-    margin-right: 25%;
+    position: relative;
+    margin-right: 30%;
     height: 85%;
+    bottom: 0px;
 }
 
 #landing_image{
-    position: relative;
-    bottom: 0px;
     height: 100%;
     overflow: hidden;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
@@ -835,7 +835,7 @@ a:link, a:visited{
 
     /*Landing*/
     #intro_image_div{
-        margin-right: 1%;
+        margin-right: 0;
         height: 85%;
     }
 

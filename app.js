@@ -3,11 +3,9 @@ const express = require("express")
 const expressHB = require('express-handlebars')
 const path = require("path")
 const bodyParser = require("body-parser")
-const MongoClient = require("mongodb").MongoClient
 const app = express()
 const randomstr = require("randomstring")
 const session = require("client-sessions");
-//const database = client.db("rb2kSite")
 
 //App declarations.
 app.engine("handlebars", expressHB({defaultLayout: 'default'}))
@@ -60,7 +58,7 @@ app.get("*", (req, res) => {
 })
 
 //Ports
-const HTTPort = process.env.PORT || 3000
+const HTTPort = process.env.PORT || 8080
 app.listen(HTTPort, () => {
     console.log(`Listening on port ${HTTPort}`)
 })

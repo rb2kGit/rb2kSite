@@ -174,26 +174,35 @@ a:link, a:visited{
     left: 0px;
     top: 0px;
     position: absolute;
-    width: 30%;
-    margin: auto;
+    height: 100%;
+    margin-left: 5%;
 }
 .about_image{
-    margin: 0px;
     height: 100%;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .about_text_div{
+    position: relative;
+    border: solid 1px white;
+    border-radius: 10px;
     width: 55%;
     color: white;
-    margin: 2%;
-    z-index: 1;
+    margin: 3%;
 }
 .about_header{
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
+    margin: 3%;
+    z-index: 2;
 }
 .about_text{
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    margin: 3%;
+    z-index: 2;
 }
 #panel3_div{
     background-color: #66d1aa;
@@ -546,13 +555,13 @@ a:link, a:visited{
 }
 .contact_panel{
     position: relative;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 .contact_block{
     margin: auto;
-    width: 100%;
+    width: 50%;
     position: relative;
     overflow: hidden;
     margin: auto;
@@ -582,6 +591,7 @@ a:link, a:visited{
     color: #f4ebc1;
 }
 .contact_image_div{
+    height: 100%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -589,8 +599,8 @@ a:link, a:visited{
     position: absolute;
 }
 .image_overlay{
-    background: gray;
-    opacity: 0.3;
+    background: black;
+    opacity: 40%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -608,7 +618,9 @@ a:link, a:visited{
     justify-content: space-around;
 }
 .services_overlay{
+    top: 0px;
     position: absolute;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     background-color: black;
@@ -628,8 +640,8 @@ a:link, a:visited{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 50%;
-    border: solid 1px black;
+    height: 42%;
+    border: solid 1px white;
 }
 .services_link{
     z-index: 2;
@@ -678,6 +690,9 @@ a:link, a:visited{
 }
 
 #panel1_div{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
     background-color: #40a8c4;
     /* #54acc7;*/
     height: 650px;
@@ -716,15 +731,14 @@ a:link, a:visited{
 }
 
 #intro_image_div{
-    position: absolute;
-    height: inherit;
-    right: 15%;
-    overflow: hidden;
-    max-width: 150%;
+    margin-right: 25%;
+    height: 85%;
 }
 
 #landing_image{
-    max-height: 100%;
+    position: relative;
+    bottom: 0px;
+    height: 100%;
     overflow: hidden;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
@@ -797,7 +811,7 @@ a:link, a:visited{
 }
 
 #panel6_div{
-    background-image: url("/images/rb2k.jpg");
+    background-image: url("/images/skyline.jpg");
     background-position: top;
     background-size: cover;
 }
@@ -817,6 +831,12 @@ a:link, a:visited{
     }
     .mobile_nav{
         display: flex;
+    }
+
+    /*Landing*/
+    #intro_image_div{
+        margin-right: 1%;
+        height: 85%;
     }
 
     /*What's New*/
@@ -909,7 +929,8 @@ a:link, a:visited{
     }
 
     /*Contact CSS*/
-    .contact_panel{
-        width: 10%;
+    .contact_block{
+        width: 90%;
     }
+
 }

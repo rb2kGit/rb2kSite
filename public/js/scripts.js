@@ -61,7 +61,6 @@ window.addEventListener("scroll", () => {
 let wnButton = document.querySelector(".whats_new_button");
 
 wnButton.addEventListener('mouseover', () => {
-    console.log(wnButton.classList)
     wnButton.classList.add('inverted_button')
 })
 wnButton.addEventListener('mouseleave', () => {

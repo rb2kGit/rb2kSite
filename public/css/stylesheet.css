@@ -92,14 +92,13 @@ a:link, a:visited{
 .image_panel{
     width: 100%;
     overflow: hidden;
-    height: 750px;
+    height: 650px;
     position: relative;
 }
 
 .text_panel{
     width: 100%;
-    overflow: hidden;
-    height: 550px;
+    height: 450px;
     position: relative;
 }
 

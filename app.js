@@ -28,7 +28,7 @@ app.use(session({
 
 //Routes
 app.get("/", (req, res) => {
-    res.render("landing")
+    res.render("index")
 })
 
 app.get("/rb2ksite", (req, res) => {
@@ -58,7 +58,7 @@ app.get("*", (req, res) => {
 })
 
 //Ports
-const HTTPort = process.env.PORT || 8080
+const HTTPort = process.env.PORT || 3000
 app.listen(HTTPort, () => {
     console.log(`Listening on port ${HTTPort}`)
 })

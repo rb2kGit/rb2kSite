@@ -52,10 +52,10 @@ app.get("/flappysite", (req, res) => {
 app.get("/servicesite", (req, res) => {
     res.render("services_page")
 })
-
 app.get("*", (req, res) => {
     res.redirect("/")
 })
+
 
 //Ports
 const HTTPort = process.env.PORT || 3000

@@ -928,7 +928,7 @@ a:link, a:visited{
         position: absolute;
         color: white;
         top: 45%;
-        left: 12%;
+        left: 14%;
     }
     #landing_header{
         font-size: 40px;
@@ -975,6 +975,9 @@ a:link, a:visited{
     }
 
     /*Projects*/
+    .project_panel{
+        height: 1500px;
+    }
     .p4_grid_container{
         display: grid;
         grid-template-areas: 

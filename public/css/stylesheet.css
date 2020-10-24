@@ -245,7 +245,7 @@ a:link, a:visited{
     margin: 0;
 }
 .about_info_div{
-    margin: 0 20px 0 auto;
+    margin: 0 40px 0 auto;
     color: white;
     width: 50%;
 }
@@ -262,6 +262,7 @@ a:link, a:visited{
     width: 100%;
 }
 .about_text{
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
@@ -997,11 +998,13 @@ a:link, a:visited{
     .about_text{
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         z-index: 2;
     }
     .about_image_div{
         height: 80%;
+        right: 0px;
+        left: initial;
     }
 
     /*Projects*/

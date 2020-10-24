@@ -119,7 +119,6 @@ a:link, a:visited{
 .text_panel{
     width: 100%;
     height: 450px;
-    position: relative;
     overflow: hidden;
 }
 
@@ -243,50 +242,52 @@ a:link, a:visited{
 
 /*About CSS*/
 .about_container_div{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-right: 0px;
-    padding: 0px;
-    height: 100%;
+    margin: 0;
 }
 .about_image_div{
-    left: 0px;
-    bottom: 0px;
     position: absolute;
     height: 75%;
-    margin-left: 3%;
+    left: 3%;
+    bottom: 0px;
 }
 .about_image{
     height: 100%;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
 }
+.about_info_div{
+    right: 0px;
+    width: 50%;
+    margin: 0 3% 0 0;
+}
 .about_text_div{
     position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
     border: solid 1px white;
     border-radius: 10px;
-    width: 45%;
+    width: 100%;
     color: white;
-    margin: 3%;
 }
 .about_header{
-    position: relative;
+    right: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    margin: 3%;
-    z-index: 2;
+    font-size: 22px;
+    margin: 0 0 1% 1%;
+    color: white;
 }
 .about_text{
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     margin: 3%;
     z-index: 2;
 }
 .panel3_div{
     height: 550px;
-    background-color: #66d1aa;
+    overflow: hidden;
+    background-color: #53b592/*#66d1aa*/;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
 }
@@ -873,12 +874,6 @@ a:link, a:visited{
     text-align: right;
 }
 
-#about_text{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-
 
 #site_header{
     padding: 2px;
@@ -950,28 +945,47 @@ a:link, a:visited{
     .social_text{
         display: none;
     }
-    .about_text_div{
-        width: 100%;
-        color: white;
-        margin: 5%;
-        z-index: 1;
-    }
     
     /*About*/
-    .panel3_div{
-        height: 650px;
-    }
-    .about_text{
-        position: relative;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        margin: 3%;
-        z-index: 2;
+    .about_container_div{
+        margin: 0;
+        width: 100%;
     }
     .about_image_div{
-        left: -55%;
         position: absolute;
-        margin-left: 0;
+        height: 75%;
+        bottom: 0px;
+    }
+    .about_image{
+        height: 100%;
+        -webkit-filter: drop-shadow(10px 10px 10px #222222);
+        filter: drop-shadow(10px 10px 10px #222222);
+    }
+    .about_info_div{
+        left: 0px;
+        margin: 0 5% 0 5%;
+        width: 90%;
+    }
+    .about_text_div{
+        box-sizing: border-box;
+        border: solid 1px white;
+        border-radius: 10px;
+        padding: 3%;
+        width: 100%;
+        color: white;
+    }
+    .about_header{
+        margin: 0 0 2% 1%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        color: white;
+    }
+    .about_text{
+        margin: 0;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        z-index: 2;
     }
 
     /*Projects*/

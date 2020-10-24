@@ -123,6 +123,60 @@ a:link, a:visited{
     overflow: hidden;
 }
 
+
+/*News*/
+.news_panel{
+    background-color: #66d1aa;
+}
+.news_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.news_header_div{
+    margin: 0;
+    padding: 0;
+}
+.news_header{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: white;
+}
+.social_link_div{
+    margin: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.linkedin_icon{
+    width: 46px;
+    height: 46px;
+    background-image: url("/images/linkedin_icon.png");
+    background-size: cover;
+}
+.news_button_div{
+    margin: 0px;
+}
+.news_button{
+    background: none;
+    color: #f4ebc1;
+    border: solid;
+    border-color: white;
+    font-size: 24px;
+    width: 350px;
+    height: 75px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
 /*What New CSS*/
 .news_elements{
     display: flex;
@@ -179,6 +233,13 @@ a:link, a:visited{
     margin-left: 10%;
     margin-right: 10%;
 }
+.photo_credit_span{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
 
 /*About CSS*/
 .about_container_div{
@@ -232,6 +293,9 @@ a:link, a:visited{
 
 
 /*Projects CSS*/
+.project_panel{
+    height: 1000px;
+}
 .p4_grid_container{
     display: grid;
     grid-template-areas: 
@@ -240,7 +304,7 @@ a:link, a:visited{
         'project1 project1 project3 project3 project3 project4'
         'project5 project6 project6 project6 project6 project4'
         'project5 project6 project6 project6 project6 project4';
-    height: 750px;
+    height: 1000px;
     width: 100%;
     gap: 20px;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
@@ -802,10 +866,11 @@ a:link, a:visited{
 }
 .photo_credit_div{
     position: absolute;
-    max-width: 50%;
+    max-width: 100%;
     bottom: 0px;
     right: 0px;
-    margin: 10px;
+    margin: 3px;
+    text-align: right;
 }
 
 #about_text{

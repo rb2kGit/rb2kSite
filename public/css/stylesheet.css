@@ -955,6 +955,7 @@ a:link, a:visited{
         position: absolute;
         height: 75%;
         bottom: 0px;
+        overflow: hidden;
     }
     .about_image{
         height: 100%;

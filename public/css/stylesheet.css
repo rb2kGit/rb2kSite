@@ -244,7 +244,38 @@ a:link, a:visited{
 .about_container_div{
     margin: 0;
 }
+.about_info_div{
+    margin: 0 20px 0 auto;
+    color: white;
+    width: 50%;
+}
+.about_header{
+    margin: 0 0 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.about_text_div{
+    box-sizing: border-box;
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 2%;
+    width: 100%;
+}
+.about_text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
 .about_image_div{
+    height: 90%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+.about_image{
+    height: 100%;
+}
+/*.about_image_div{
     position: absolute;
     height: 75%;
     left: 3%;
@@ -283,8 +314,11 @@ a:link, a:visited{
     font-size: 18px;
     margin: 3%;
     z-index: 2;
-}
+}*/
 .panel3_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 550px;
     overflow: hidden;
     background-color: #53b592/*#66d1aa*/;
@@ -951,42 +985,23 @@ a:link, a:visited{
         margin: 0;
         width: 100%;
     }
-    .about_image_div{
-        position: absolute;
-        height: 75%;
-        bottom: 0px;
-        overflow: hidden;
-    }
-    .about_image{
-        height: 100%;
-        -webkit-filter: drop-shadow(10px 10px 10px #222222);
-        filter: drop-shadow(10px 10px 10px #222222);
-    }
     .about_info_div{
-        left: 0px;
-        margin: 0 5% 0 5%;
         width: 90%;
     }
     .about_text_div{
-        box-sizing: border-box;
-        border: solid 1px white;
         border-radius: 10px;
         padding: 3%;
         width: 100%;
         color: white;
     }
-    .about_header{
-        margin: 0 0 2% 1%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        color: white;
-    }
     .about_text{
-        margin: 0;
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 17px;
         z-index: 2;
+    }
+    .about_image_div{
+        height: 80%;
     }
 
     /*Projects*/

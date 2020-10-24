@@ -877,7 +877,7 @@ a:link, a:visited{
 
     /*Landing*/
     #intro_image_div{
-        margin-right: 0;
+        margin-right: -2%;
         height: 85%;
     }
 

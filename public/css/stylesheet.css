@@ -242,10 +242,13 @@ a:link, a:visited{
 
 /*About CSS*/
 .about_container_div{
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
 }
 .about_info_div{
-    margin: 0 40px 0 auto;
+    margin: auto 40px auto auto;
     color: white;
     width: 50%;
 }
@@ -267,19 +270,16 @@ a:link, a:visited{
     font-size: 18px;
 }
 .about_image_div{
-    box-sizing: border-box;
     width: 100%;
     position: absolute;
     left: 0px;
-    bottom: -10px;
+    bottom: 0px;
     overflow: hidden;
     padding: 0px;
 }
 .about_image{
     margin: 0px;
     width: 50%;
-    bottom: 0px;
-    margin-top: auto;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
 }
@@ -288,10 +288,7 @@ a:link, a:visited{
     flex-direction: column;
     justify-content: center;
     height: 550px;
-    overflow: hidden;
     background-color: #53b592/*#66d1aa*/;
-    -webkit-filter: drop-shadow(10px 10px 10px #222222);
-    filter: drop-shadow(10px 10px 10px #222222);
 }
 
 
@@ -960,7 +957,7 @@ a:link, a:visited{
     }
     .about_info_div{
         width: 90%;
-        margin: 0 auto 0 auto;
+        margin: auto;
     }
     .about_text_div{
         border-radius: 10px;

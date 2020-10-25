@@ -302,6 +302,7 @@ a:link, a:visited{
 .p4_grid_container{
     display: grid;
     grid-template-areas: 
+        'projectT projectT projectT projectT projectT projectT'
         'project1 project1 project2 project2 project2 project2'
         'project1 project1 project2 project2 project2 project2'
         'project1 project1 project3 project3 project3 project4'
@@ -312,6 +313,10 @@ a:link, a:visited{
     gap: 20px;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
+}
+.projectT_grid_element{
+    grid-area: projectT;
+    background-color: grey;
 }
 .p4_grid_element1{
     grid-area: project1;

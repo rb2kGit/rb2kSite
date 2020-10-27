@@ -21,7 +21,7 @@ a:link, a:visited{
     width: 100%;
     height: 5vh;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     background-color: #40a8c4;
     box-sizing: border-box;
 }
@@ -85,7 +85,7 @@ a:link, a:visited{
     bottom: 0vh;
     right: 0px;
     background-color: #40a8c4;
-    z-index: 2;
+    z-index: 6;
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
@@ -112,13 +112,13 @@ a:link, a:visited{
 .image_panel{
     width: 100%;
     overflow: hidden;
-    height: 650px;
+    height: 600px;
     position: relative;
 }
 
 .text_panel{
     width: 100%;
-    height: 450px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -273,7 +273,7 @@ a:link, a:visited{
     width: 100%;
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    bottom: -4px;
     overflow: hidden;
     padding: 0px;
 }
@@ -294,34 +294,37 @@ a:link, a:visited{
 
 /*Projects CSS*/
 .project_panel{
-    height: 1000px;
+    height: 800px;
+    background-image: url(/images/grid_background.jpg)
 }
 .p4_grid_container{
     display: grid;
     grid-template-areas: 
         'projectT projectT projectT projectT projectT projectT'
-        'project1 project1 project2 project2 project2 project2'
-        'project1 project1 project2 project2 project2 project2'
-        'project1 project1 project3 project3 project3 project4'
-        'project5 project6 project6 project6 project6 project4'
-        'project5 project6 project6 project6 project6 project4';
-    height: 1000px;
+        'project1 project1 project2 project2 project6 project6'
+        'project1 project1 project2 project2 project6 project6'
+        'project1 project1 project2 project2 project6 project6'
+        'project3 project3 project3 project3 project6 project6'
+        'project3 project3 project3 project3 project6 project6'
+        'projectE projectE projectE projectE projectE projectE';
+    height: 800px;
     width: 100%;
-    gap: 20px;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
 }
 .projectT_grid_element{
     grid-area: projectT;
     background-color: grey;
+    background-image: url(/images/code_background.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .p4_grid_element1{
     grid-area: project1;
     background-image: url(/images/site_image.png);
-    background-position:  center;
+    background-position: center;
     background-size: cover;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 16px 8px 8px 16px;
     cursor: pointer;
 }
 .hidden_overlay_1{
@@ -348,8 +351,7 @@ a:link, a:visited{
     background-image: url(/images/pong_image.png);
     background-position:  left center;
     background-size: cover;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin: 16px 8px 8px 8px;
     cursor: pointer;
 }
 .hidden_overlay_2{
@@ -377,6 +379,7 @@ a:link, a:visited{
     background-image: url(/images/nv_image.png);
     background-position:  left bottom;
     background-size: cover;
+    margin: 8px 8px 16px 16px;
     cursor: pointer;
 }
 .hidden_overlay_3{
@@ -427,7 +430,6 @@ a:link, a:visited{
     pointer-events: none;
     transition: 1s all ease;
 }
-
 .p4_grid_element5{
     grid-area: project5;
     background-image: url(/images/cpp_image.png);
@@ -461,7 +463,7 @@ a:link, a:visited{
     background-image: url(/images/fbird_image.png);
     background-position:  left top;
     background-size: cover;
-    margin-bottom: 20px;
+    margin: 16px 16px 16px 8px;
     cursor: pointer;
 }
 .hidden_overlay_6{
@@ -483,6 +485,34 @@ a:link, a:visited{
     opacity: 0;
     pointer-events: none;
     transition: 1s all ease;
+}
+.projectE_grid_element{
+    grid-area: projectE;
+    background-image: url(/images/code_background_reverse.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.project_header_container{
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    margin: 0;
+}
+.project_header_containerR{
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    margin: 0;
+}
+.project_header{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+}
+.arrow_icon{
+    width: 50px;
+    margin: 10px 0 10px auto;
 }
 .content_div{
     width: 100%;
@@ -636,32 +666,20 @@ a:link, a:visited{
 }
 
 /*Contact CSS*/
-#panel5_div{
+.contact_panel{
     background-color: #54acc7;
     position: relative;
     display: flex;
     flex-direction: row;
 }
-.contact_panel{
-    position: relative;
+.contact_block{
+    margin: 0 0 0 3%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-}
-.contact_block{
-    margin: auto;
-    width: 50%;
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    text-align: center;
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    height: 100%;
+    align-items: center;
 }
 .contact_text_div{
-    position: absolute;
-    width: 100%;
+    margin: 0
 }
 .contact_text{
     display: flex;
@@ -669,23 +687,39 @@ a:link, a:visited{
     color: white;
 }
 .contact_header{
-    font-size: 3vw;
+    font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
+}
+span{
+    opacity: 0;
+    transition: all 0 linear;
+}
+span.appear{
+    opacity: 1;
 }
 .contact_p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 24px;
+    z-index: 2;
 }
 .contact_link{
     color: #f4ebc1;
 }
+.contact_break{
+    border: solid 1px white;
+    margin: 5px 0 5px 0;
+    width: 0%;
+    transition: all 1s ease;
+}
+.line_grow{
+    width: 90vw;
+}
 .contact_image_div{
-    height: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 90%;
     overflow: hidden;
     position: absolute;
+    right: 10%;
+    bottom: 0px;
 }
 .image_overlay{
     background: black;
@@ -696,6 +730,9 @@ a:link, a:visited{
 }
 .contact_image{
     height: 100%;
+    z-index: 1;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 8px #222222);
 }
 
 /*Services CSS*/
@@ -719,7 +756,7 @@ a:link, a:visited{
 .services_header{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     color: white;
     z-index: 2;
 }
@@ -727,28 +764,26 @@ a:link, a:visited{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 42%;
     border: solid 1px white;
 }
 .services_link{
     z-index: 2;
 }
 .services_button{
-    margin: auto;
-    max-width: 200px;
-    max-height: 75px;
-    border: 1px solid #40a8c4;
-    border-radius: 5px;
-    background-color: #40a8c4;
-    color: #f4ebc1;
-    font-family: arial;
-    font-size: 25px;
+    margin: 20px; 
+    padding: 10px;
     text-align: center;
-    padding: 20px;
+    color: #f4ebc1;
+    font-family: Arial, Helvetica, sans-serif;
     box-shadow: 10px 10px 20px black;
-    z-index: 1;
+    background: none;
+    border: solid;
+    border-color: white;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /*Footer CSS*/
@@ -985,18 +1020,22 @@ a:link, a:visited{
 
     /*Projects*/
     .project_panel{
-        height: 1500px;
+        height: 1200px;
     }
     .p4_grid_container{
         display: grid;
         grid-template-areas: 
+            'projectT'
+            'project1'
             'project1'
             'project2'
+            'project2'
             'project3'
-            'project4'
-            'project5'
-            'project6';
-        height: 1500px;
+            'project3'
+            'project6'
+            'project6'
+            'projectE';
+        height: 1200px;
         width: 100%;
         -webkit-filter: drop-shadow(10px 10px 10px #222222);
         filter: drop-shadow(10px 10px 10px #222222);
@@ -1066,6 +1105,15 @@ a:link, a:visited{
     /*Contact CSS*/
     .contact_block{
         width: 90%;
+    }
+    .contact_image_div{
+        height: 90%;
+        overflow: hidden;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        -ms-transform: translatex(50%);
+        transform: translatex(50%);
     }
 
 }

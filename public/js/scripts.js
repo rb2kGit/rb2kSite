@@ -170,7 +170,7 @@ p3Div.addEventListener("click", () => {
         clicked3 = true;
     }
 })
-p4Div.addEventListener("click", () => {
+/*p4Div.addEventListener("click", () => {
     if(clicked4){
         hidden4.classList.remove("overlay_reveal")
         items4.classList.remove("items_reveal")
@@ -193,7 +193,7 @@ p5Div.addEventListener("click", () => {
         items5.classList.add("items_reveal")
         clicked5 = true;
     }
-})
+})*/
 p6Div.addEventListener("click", () => {
     if(clicked6){
         hidden6.classList.remove("overlay_reveal")
@@ -204,5 +204,40 @@ p6Div.addEventListener("click", () => {
         hidden6.classList.add("overlay_reveal")
         items6.classList.add("items_reveal")
         clicked6 = true;
+    }
+})
+
+//Contact panel animations.
+let contactH = document.querySelector(".contact_header");
+let headerText = contactH.textContent;
+let splitH = headerText.split("")
+contactH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
+
+for(let i = 0; i < splitH.length; i++){
+    contactH.innerHTML += "<span>" + splitH[i] + "</span>";
+}
+
+let panel = document.querySelector(".contact_panel");
+panel.addEventListener("mouseover", () => {
+    let charIndex = 0;
+    let contact_text_timer = setInterval(keystroke, 200);
+    function keystroke(){
+        let span = contactH.querySelectorAll("span")[charIndex];
+        console.log(span.textContent);
+        span.classList.add("appear");
+    
+        charIndex++;
+        
+        if(charIndex === splitH.length){
+            stopAnimation();
+            let line = document.querySelector(".contact_break");
+            line.classList.add("line_grow")
+            return;
+        }
+    }
+    
+    function stopAnimation(){
+        clearInterval(contact_text_timer);
+        contact_text_timer = null;
     }
 })

@@ -20,7 +20,7 @@ a:link, a:visited{
 /*Nav Bar CSS*/
 .header_nav{
     width: 100%;
-    height: 5vh;
+    height: 50px;
     position: fixed;
     z-index: 5;
     background-color: #40a8c4;
@@ -126,7 +126,12 @@ a:link, a:visited{
 
 /*News*/
 .news_panel{
-    background-color: #66d1aa;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(/images/aurora.jpg);
+    background-size: fill;
+    background-position: top;
 }
 .news_container{
     width: 100%;
@@ -151,16 +156,39 @@ a:link, a:visited{
     margin: 0;
     width: 50%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.linkedin_icon{
+.social_link{
+    margin: 10px;
+}
+.social_icon{
     width: 46px;
     height: 46px;
-    background-image: url("/images/linkedin_icon.png");
+    margin: 10px;
     background-size: cover;
 }
+.linkedin_icon{
+    background-image: url("/images/linkedin_icon.png");
+}
+.github_icon{
+    background-image: url("/images/github_icon.png");
+}
+.facebook_icon{
+    background-image: url("/images/facebook_icon.png");
+}
+.instagram_icon{
+    background-image: url("/images/instagram_icon.png");
+}
+.twitter_icon{
+    background-image: url("/images/twitter_icon.png");
+}
+.youtube_icon{
+    background-image: url("/images/youtube_icon.png");
+}
+
 .news_button_div{
     margin: 0px;
 }
@@ -170,8 +198,8 @@ a:link, a:visited{
     border: solid;
     border-color: white;
     font-size: 24px;
-    width: 350px;
-    height: 75px;
+    width: 250px;
+    height: 50px;
     transition: all 0.5s ease;
     cursor: pointer;
 }
@@ -233,12 +261,14 @@ a:link, a:visited{
     margin-left: 10%;
     margin-right: 10%;
 }
+
 .photo_credit_span{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     width: 100%;
+    color: white;
 }
 
 /*About CSS*/
@@ -254,9 +284,9 @@ a:link, a:visited{
     width: 50%;
 }
 .about_header{
-    margin: 0 0 5px 10px;
+    margin: 0 0 10px 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
 .about_text_div{
     box-sizing: border-box;
@@ -312,6 +342,7 @@ a:link, a:visited{
 }
 .projectT_grid_element{
     grid-area: projectT;
+    position: relative;
     background-color: grey;
     background-image: url(/images/code_background.jpg);
     background-size: cover;
@@ -500,6 +531,7 @@ a:link, a:visited{
 }
 .projectE_grid_element{
     grid-area: projectE;
+    position: relative;
     background-image: url(/images/code_background_reverse.jpg);
     background-size: cover;
     background-position: center;
@@ -507,13 +539,13 @@ a:link, a:visited{
 .project_header_container{
     position: absolute;
     left: 5%;
-    top: 10px;
+    top: 15px;
     margin: 0;
 }
 .project_header_containerR{
     position: absolute;
     right: 5%;
-    bottom: 10px;
+    bottom: 15px;
     margin: 0;
 }
 .project_header{
@@ -758,7 +790,6 @@ span.appear{
 .services_overlay{
     top: 0px;
     position: absolute;
-    border-radius: 10px;
     width: 100%;
     height: 100%;
     background-color: black;
@@ -796,6 +827,7 @@ span.appear{
     border-color: white;
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 /*Footer CSS*/
@@ -906,7 +938,7 @@ span.appear{
 .inverted_button{
     background: white;
     color: darkblue;
-    border: none;
+    border-color: white;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
 }
@@ -918,7 +950,6 @@ span.appear{
 }
 .photo_credit_div{
     position: absolute;
-    max-width: 100%;
     bottom: 0px;
     right: 0px;
     margin: 3px;

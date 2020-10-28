@@ -52,22 +52,32 @@ flair.addEventListener('click', () => {
 
 
 //Parallax script
-let parallaxDiv = document.querySelector("#panel2_div");
+let parallaxDiv = document.querySelector(".news_panel");
 window.addEventListener("scroll", () => {
     let parallaxOffset = window.pageYOffset;
-    parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.6 + "px";
+    parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.8 + "px";
 })
 
-let wnButton = document.querySelector(".whats_new_button");
+/*let wnButton = document.querySelector(".whats_new_button");
 
 wnButton.addEventListener('mouseover', () => {
     wnButton.classList.add('inverted_button')
 })
 wnButton.addEventListener('mouseleave', () => {
     wnButton.classList.remove('inverted_button')
+})*/
+
+//News panel scripts
+let news_but = document.querySelector(".news_button");
+
+news_but.addEventListener("mouseover", () => {
+    news_but.classList.add("inverted_button")
+})
+news_but.addEventListener("mouseleave", () => {
+    news_but.classList.remove("inverted_button")
 })
 
-//Social div
+/*//Social div
 let nodes = document.querySelectorAll(".social_nodes")
 let socialGrid = document.querySelectorAll(".social_grid_element")
 let socialHeader = document.querySelector(".social_header_div")
@@ -98,9 +108,9 @@ button.addEventListener("click", () => {
         })
         buttonClicked = true;
     }
-})
+})*/
 
-//Project Div
+//Project panel scripts.
 let clicked1 = false;
 let clicked2 = false;
 let clicked3 = false;
@@ -223,7 +233,6 @@ panel.addEventListener("mouseover", () => {
     let contact_text_timer = setInterval(keystroke, 200);
     function keystroke(){
         let span = contactH.querySelectorAll("span")[charIndex];
-        console.log(span.textContent);
         span.classList.add("appear");
     
         charIndex++;
@@ -240,4 +249,13 @@ panel.addEventListener("mouseover", () => {
         clearInterval(contact_text_timer);
         contact_text_timer = null;
     }
+})
+
+//rb2k Services scripts.
+let service_but = document.querySelector(".services_button");
+service_but.addEventListener("mouseover", () => {
+    service_but.classList.add("inverted_button")
+})
+service_but.addEventListener("mouseleave", () => {
+    service_but.classList.remove("inverted_button")
 })

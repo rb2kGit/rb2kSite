@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-image: url(/images/grid_background.jpg);
     overflow-x: hidden;
 }
 
@@ -295,7 +296,6 @@ a:link, a:visited{
 /*Projects CSS*/
 .project_panel{
     height: 800px;
-    background-image: url(/images/grid_background.jpg)
 }
 .p4_grid_container{
     display: grid;
@@ -309,8 +309,6 @@ a:link, a:visited{
         'projectE projectE projectE projectE projectE projectE';
     height: 800px;
     width: 100%;
-    -webkit-filter: drop-shadow(10px 10px 10px #222222);
-    filter: drop-shadow(10px 10px 10px #222222);
 }
 .projectT_grid_element{
     grid-area: projectT;
@@ -318,6 +316,8 @@ a:link, a:visited{
     background-image: url(/images/code_background.jpg);
     background-size: cover;
     background-position: center;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .p4_grid_element1{
     grid-area: project1;
@@ -326,6 +326,8 @@ a:link, a:visited{
     background-size: cover;
     margin: 16px 8px 8px 16px;
     cursor: pointer;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .hidden_overlay_1{
     background-color: white;
@@ -353,6 +355,8 @@ a:link, a:visited{
     background-size: cover;
     margin: 16px 8px 8px 8px;
     cursor: pointer;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .hidden_overlay_2{
     background-color: white;
@@ -381,6 +385,8 @@ a:link, a:visited{
     background-size: cover;
     margin: 8px 8px 16px 16px;
     cursor: pointer;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .hidden_overlay_3{
     background-color: white;
@@ -410,6 +416,8 @@ a:link, a:visited{
     margin-right: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .hidden_overlay_4{
     background-color: white;
@@ -438,6 +446,8 @@ a:link, a:visited{
     margin-bottom: 20px;
     margin-left: 20px;
     cursor: pointer;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .hidden_overlay_5{
     background-color: white;
@@ -465,6 +475,8 @@ a:link, a:visited{
     background-size: cover;
     margin: 16px 16px 16px 8px;
     cursor: pointer;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
 }
 .hidden_overlay_6{
     background-color: white;
@@ -495,13 +507,13 @@ a:link, a:visited{
 .project_header_container{
     position: absolute;
     left: 5%;
-    top: 2%;
+    top: 10px;
     margin: 0;
 }
 .project_header_containerR{
     position: absolute;
     right: 5%;
-    bottom: 2%;
+    bottom: 10px;
     margin: 0;
 }
 .project_header{

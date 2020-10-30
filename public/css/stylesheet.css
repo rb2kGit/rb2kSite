@@ -1,13 +1,20 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-image: url(/images/grid_background.jpg);
     overflow-x: hidden;
+}
+footer{
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    overflow: hidden;
+    background-color: #40a8c4;
+    -webkit-filter: drop-shadow(10px 10px 10px black);
+    filter: drop-shadow(10px 10px 10px black);
 }
 
 a:link, a:visited{
     text-decoration: none;
-    /*color: #f4ebc1;*/
 }
 
 .centered_vertical{
@@ -23,31 +30,19 @@ a:link, a:visited{
     height: 50px;
     position: fixed;
     z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: #40a8c4;
     box-sizing: border-box;
 }
-.nav_links_container{
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    box-sizing: border-box;
-}
-.name_header{
-    margin: 0 0 0 8px;
-    padding: 0px;
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
-    color: #f4ebc1;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font-weight: normal;
+.logo_div{
+    margin: 0 0 0 10px;
 }
 .logo_name_div{
-    margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .rb2k_logo{
@@ -59,11 +54,55 @@ a:link, a:visited{
     width: 30px;
     display: none;
 }
-.header_nav_links{
+#logo_lines{
+    margin: 0;
+}
+.name_header{
+    margin: 0 0 0 10px;
+    padding: 0px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
     color: #f4ebc1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.nav_links_container{
+    margin: 0 10px 0 0;
+    width: 35%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    box-sizing: border-box;
+}
+.nav_links_block{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.link_lines{
+    opacity: 0;
+    width: 0%; 
+    margin: 5px 0 5px auto;
+    border: solid 1px white;
+    transition: all 0.5s ease;
+}
+.hovered_lines{
+    opacity: 1;
+    width: 80%;
+}
+.header_nav_links{
+    margin: 0 0 0 30px;
+    color: #f4ebc1;
+    display: flex;
+    align-items: center;
     transition: all 0.3s ease;
     font-family: sans-serif;
     font-size: 16px;
+}
+.logo_nav_link{
+    margin: 0 0 0 0;
 }
 .hovered_nav_item{
     color: white;
@@ -82,7 +121,7 @@ a:link, a:visited{
 .mobile_nav{
     position: fixed;
     width: 100%;
-    height: 95vh;
+    height: 95%;
     bottom: 0vh;
     right: 0px;
     background-color: #40a8c4;
@@ -113,16 +152,15 @@ a:link, a:visited{
 .image_panel{
     width: 100%;
     overflow: hidden;
-    height: 600px;
+    height: 700px;
     position: relative;
 }
-
 .text_panel{
     width: 100%;
     height: 400px;
     overflow: hidden;
+    position: relative;
 }
-
 
 /*News*/
 .news_panel{
@@ -161,15 +199,7 @@ a:link, a:visited{
     align-items: center;
     justify-content: space-around;
 }
-.social_link{
-    margin: 10px;
-}
-.social_icon{
-    width: 46px;
-    height: 46px;
-    margin: 10px;
-    background-size: cover;
-}
+
 .linkedin_icon{
     background-image: url("/images/linkedin_icon.png");
 }
@@ -188,7 +218,27 @@ a:link, a:visited{
 .youtube_icon{
     background-image: url("/images/youtube_icon.png");
 }
-
+.node_icon{
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    background-image: url("/images/nodejs_icon.png");
+}
+.handlebars_icon{
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    background-image: url("/images/handlebars_icon.png");
+}
+.feed_div{
+    display: none;
+    margin: 0;
+    width: 50%;
+    height: 200px;
+}
+.fb-page{
+    border: solid 1px white;
+}
 .news_button_div{
     margin: 0px;
 }
@@ -272,33 +322,51 @@ a:link, a:visited{
 }
 
 /*About CSS*/
-.about_container_div{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.about_panel{
     position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image: url(/images/aurora_large.jpg);
+    background-size: auto 145%;
+    background-position: top;
+}
+.about_container_div{
+    width: 90%;
+    margin: 200px auto 200px auto;
 }
 .about_info_div{
-    margin: auto 40px auto auto;
     color: white;
-    width: 50%;
+    margin: 0 0 50px 0;
 }
 .about_header{
-    margin: 0 0 10px 10px;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 36px;
+    text-align: left;
 }
 .about_text_div{
-    box-sizing: border-box;
-    border: solid 1px white;
-    border-radius: 10px;
-    padding: 2%;
-    width: 100%;
+    margin: 0 auto 0 0;
+    width: 50%;
+    transform: translateX(-150%);
+    transition: all 1s ease;
+}
+.about_text_div.drop_down{
+    transform: translateY(0%);
 }
 .about_text{
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+}
+.contact_break{
+    border: solid 1px white;
+    margin: 5px auto 5px 0;
+    width: 0%;
+    transition: all 1s ease;
+}
+.right{
+    margin: 5px 0 5px auto;
 }
 .about_image_div{
     width: 100%;
@@ -308,18 +376,72 @@ a:link, a:visited{
     overflow: hidden;
     padding: 0px;
 }
-.about_image{
-    margin: 0px;
-    width: 50%;
-    -webkit-filter: drop-shadow(10px 10px 10px #222222);
-    filter: drop-shadow(10px 10px 10px #222222);
-}
+
 .panel3_div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 550px;
     background-color: #53b592/*#66d1aa*/;
+}
+.contact_panel{
+    background-color: #54acc7;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.contact_block{
+    margin: 200px 0 50px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contact_text_div{
+    margin: 0 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contact_text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: right;
+}
+.contact_header{
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 0 auto;
+}
+.contact_p_container{
+    margin: 0 0 0 auto;
+    transform: translateX(150%);
+    transition: all 1s ease;
+}
+.contact_p_container.slide_in{
+    transform: translateX(0%)
+}
+.contact_social{
+    margin: 0;
+    border: solid 1px white;
+}
+.type_span{
+    opacity: 0;
+    transition: all 0 linear;
+}
+.type_span.appear{
+    opacity: 1;
+}
+.contact_p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    z-index: 2;
+}
+.contact_link{
+    color: #f4ebc1;
+}
+.line_grow{
+    width: 100%;
 }
 
 
@@ -336,19 +458,58 @@ a:link, a:visited{
         'project1 project1 project2 project2 project6 project6'
         'project3 project3 project3 project3 project6 project6'
         'project3 project3 project3 project3 project6 project6'
-        'projectE projectE projectE projectE projectE projectE';
+        /*'projectE projectE projectE projectE projectE projectE'*/;
     height: 800px;
     width: 100%;
 }
 .projectT_grid_element{
     grid-area: projectT;
-    position: relative;
-    background-color: grey;
-    background-image: url(/images/code_background.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: #53b592;
+    box-sizing: border-box;
     -webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);
+}
+.project_title_container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.project_header_container{
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.project_header{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: white;
+}
+.about_image{
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    right: 15%;
+    z-index: 2;
+    -webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);
+}
+.project_lines{
+    position: absolute;
+    border: solid 1px white;
+    margin: 20px 2% 20px 2%;
+    width: 0%;
+    transition: all 1s ease;
+}
+.project_lines.line_grow{
+    width: 96%;
+}
+.bottom{
+    bottom: 0px;
 }
 .p4_grid_element1{
     grid-area: project1;
@@ -421,8 +582,8 @@ a:link, a:visited{
 }
 .hidden_overlay_3{
     background-color: white;
-    height: 100%;
-    width: 0px;
+    height: 0px;
+    width: 100%;
     position: absolute;
     opacity: 0;
     pointer-events: none;
@@ -536,23 +697,12 @@ a:link, a:visited{
     background-size: cover;
     background-position: center;
 }
-.project_header_container{
-    position: absolute;
-    left: 5%;
-    top: 15px;
-    margin: 0;
-}
+
 .project_header_containerR{
     position: absolute;
     right: 5%;
     bottom: 15px;
     margin: 0;
-}
-.project_header{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    color: white;
 }
 .arrow_icon{
     width: 50px;
@@ -709,55 +859,7 @@ a:link, a:visited{
     margin: 0;
 }
 
-/*Contact CSS*/
-.contact_panel{
-    background-color: #54acc7;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
-.contact_block{
-    margin: 0 0 0 3%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-.contact_text_div{
-    margin: 0
-}
-.contact_text{
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-.contact_header{
-    font-size: 36px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-span{
-    opacity: 0;
-    transition: all 0 linear;
-}
-span.appear{
-    opacity: 1;
-}
-.contact_p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    z-index: 2;
-}
-.contact_link{
-    color: #f4ebc1;
-}
-.contact_break{
-    border: solid 1px white;
-    margin: 5px 0 5px 0;
-    width: 0%;
-    transition: all 1s ease;
-}
-.line_grow{
-    width: 90vw;
-}
+
 .contact_image_div{
     height: 90%;
     overflow: hidden;
@@ -829,17 +931,6 @@ span.appear{
     cursor: pointer;
     transition: all 0.5s ease;
 }
-
-/*Footer CSS*/
-.footer_container{
-    width: 100%;
-    height: 100%;
-    background-color: darkgray;
-}
-
-
-
-
 
 /*Element IDs*/
 #header_div{
@@ -968,14 +1059,54 @@ span.appear{
     background-size: cover;
 }
 
+/*Footer container*/
+.footer_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.social_header_text{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+.social_links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.social_icon{
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+}
+.author_div{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 15px 0 0;
+}
+.author_text{
+    margin: 0 5px 0 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+
 
 
 @media screen and (max-width: 1024px){
     /*Nav Header*/
     .nav_links_container{
-        padding-left: 5px;
-        padding-right: 10px;
-        justify-content: space-between;
+        width: initial;
     }
     .header_nav_links{
         display: none;
@@ -991,7 +1122,7 @@ span.appear{
     #home_logo{
         display: flex;
     }
-    #name_header{
+    .name_header{
         font-size: 18px;
     }
     .burger{
@@ -1005,7 +1136,7 @@ span.appear{
         position: absolute;
         color: white;
         top: 48%;
-        left: 14%;
+        left: 10%;
     }
     #landing_header{
         font-size: 40px;
@@ -1022,44 +1153,34 @@ span.appear{
         margin-right: -2%;
         height: 85%;
     }
-
-    /*What's New*/
-    .social_text{
-        display: none;
-    }
     
     /*About*/
     .about_container_div{
-        margin: 0;
-        width: 100%;
-    }
-    .about_info_div{
         width: 90%;
-        margin: auto;
+        margin: 100px auto 100px auto;
     }
     .about_text_div{
-        border-radius: 10px;
-        padding: 3%;
-        width: 100%;
-        color: white;
+        margin: auto;
+        width: 85%;
+    }
+    .about_header{
+        text-align: center;
     }
     .about_text{
-        position: relative;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        z-index: 2;
+        font-size: 18px;
     }
-    .about_image_div{
-        width: 100%;
-        right: 0px;
-        bottom: -5px;
-        left: initial;
+    .contact_block{
+        margin: 100px 0 50px auto;
     }
-    .about_image{
-        margin-left: 50%;
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
+    .contact_header{
+        text-align: center;
+        margin: 0;
     }
+    .contact_p{
+        font-size: 18px;
+    }
+    
+
 
     /*Projects*/
     .project_panel{
@@ -1076,12 +1197,18 @@ span.appear{
             'project3'
             'project3'
             'project6'
-            'project6'
-            'projectE';
+            'project6';
         height: 1200px;
         width: 100%;
         -webkit-filter: drop-shadow(10px 10px 10px #222222);
         filter: drop-shadow(10px 10px 10px #222222);
+    }
+    .project_header_container{
+        left: 30%;
+        top: 55px;
+    }
+    .about_image{
+        right: 1%;
     }
     .p4_grid_element1{
         grid-area: project1;
@@ -1090,8 +1217,8 @@ span.appear{
         background-size: cover;
         margin-top: 20px;
         margin-bottom: 7px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .p4_grid_element2{
         grid-area: project2;
@@ -1100,8 +1227,8 @@ span.appear{
         background-size: cover;
         margin-top: 7px;
         margin-bottom: 7px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .p4_grid_element3{
         grid-area: project3;
@@ -1111,8 +1238,8 @@ span.appear{
         background-size: cover;
         margin-top: 7px;
         margin-bottom: 7px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .p4_grid_element4{
         grid-area: project4;
@@ -1121,8 +1248,8 @@ span.appear{
         background-size: cover;
         margin-top: 7px;
         margin-bottom: 7px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .p4_grid_element5{
         grid-area: project5;
@@ -1131,8 +1258,8 @@ span.appear{
         background-size: cover;
         margin-top: 7px;
         margin-bottom: 7px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .p4_grid_element6{
         grid-area: project6;
@@ -1141,22 +1268,23 @@ span.appear{
         background-size: cover;
         margin-top: 7px;
         margin-bottom: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .hidden_text{
+        font-size: 16px;
     }
 
-    /*Contact CSS*/
-    .contact_block{
-        width: 90%;
+    /*Footer*/
+    .social_header_text{
+        font-size: 12px;
     }
-    .contact_image_div{
-        height: 90%;
-        overflow: hidden;
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-        -ms-transform: translatex(50%);
-        transform: translatex(50%);
+    .social_icon{
+        width: 26px;
+        height: 26px;
+        background-size: cover;
     }
-
+    .author_div{
+        display: none;
+    }
 }

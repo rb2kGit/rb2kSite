@@ -1,6 +1,3 @@
-let navText = document.querySelectorAll('.header_nav_links')
-let burger = document.querySelector('.burger')
-let mnav = document.querySelector('.mobile_nav')
 let flair = document.querySelector('#flair_text')
 let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", 
 "Enthusiastic", "Tireless", "Insightful", "Decisive"]
@@ -8,12 +5,55 @@ let randomFlair =  flairArray[Math.floor(Math.random() * flairArray.length)]
 let flairTimer = setInterval(flairTransition, 5000)
 
 //Header scripts
-navText.forEach((item) => {
+let navLink = document.querySelectorAll('.header_nav_links')
+let rb2kblock = document.querySelector('.rb2k')
+let rb2kLines = document.querySelectorAll('#rb2k_lines')
+let problock = document.querySelector('.project')
+let prolines = document.querySelectorAll('#project_lines')
+let logodiv = document.querySelector('.logo_div')
+let logolines = document.querySelectorAll('#logo_lines')
+let burger = document.querySelector('.burger')
+let mnav = document.querySelector('.mobile_nav')
+
+navLink.forEach((item) => {
     item.addEventListener('mouseover', () => {
         item.classList.add('hovered_nav_item')
     })
     item.addEventListener('mouseleave', () => {
         item.classList.remove('hovered_nav_item')
+        rb2kLines.forEach((line) => {
+            line.classList.remove('hovered_lines')
+        })
+    })
+})
+rb2kblock.addEventListener("mouseover", () => {
+    rb2kLines.forEach((line) => {
+        line.classList.add('hovered_lines')
+    })
+})
+rb2kblock.addEventListener("mouseleave", () => {
+    rb2kLines.forEach((line) => {
+        line.classList.remove('hovered_lines')
+    })
+})
+problock.addEventListener("mouseover", () => {
+    prolines.forEach((pline) => {
+        pline.classList.add('hovered_lines')
+    })
+})
+problock.addEventListener("mouseleave", () => {
+    prolines.forEach((pline) => {
+        pline.classList.remove('hovered_lines')
+    })
+})
+logodiv.addEventListener("mouseover", () => {
+    logolines.forEach((lline) => {
+        lline.classList.add('hovered_lines')
+    })
+})
+logodiv.addEventListener("mouseleave", () => {
+    logolines.forEach((lline) => {
+        lline.classList.remove('hovered_lines')
     })
 })
 
@@ -49,13 +89,71 @@ flair.addEventListener('click', () => {
     flairTimer = setInterval(flairTransition, 5000)
 })
 
+//About panel scripts
+//Contact panel animations.
+let contactH = document.querySelector(".contact_header");
+let headerText = contactH.textContent;
+let splitH = headerText.split("")
+contactH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
+let aboutH = document.querySelector(".about_header");
+let aheaderText = aboutH.textContent;
+let splitAH = aheaderText.split("")
+aboutH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
+let aText = document.querySelector(".about_text_div")
+let cText = document.querySelector(".contact_p_container")
 
 
+for(let i = 0; i < splitH.length; i++){
+    contactH.innerHTML += '<span class="type_span">' + splitH[i] + '</span>';
+}
+for(let i = 0; i < splitAH.length; i++){
+    aboutH.innerHTML += '<span class="type_span">' + splitAH[i] + '</span>';
+}
+
+
+let panel = document.querySelector(".about_panel");
+document.addEventListener("scroll", () => {
+    let charIndexC = 0;
+    let charIndexA = 0
+    let contact_text_timer = setInterval(keystroke, 150);
+    function keystroke(){
+        let cspan = contactH.querySelectorAll("span")[charIndexC];
+        let aspan = aboutH.querySelectorAll("span")[charIndexA];
+        
+        
+        if(charIndexC === splitH.length){
+            stopAnimation();
+            let lines = document.querySelectorAll(".contact_break");
+            cText.classList.add("slide_in")
+            lines.forEach((line) => {
+                line.classList.add("line_grow")
+            })
+            return;
+        }
+        else if (charIndexA === splitAH.length){
+            cspan.classList.add("appear");
+            charIndexC++;
+            aText.classList.add("drop_down")
+        }
+        else{
+            aspan.classList.add("appear");
+            cspan.classList.add("appear");
+            charIndexC++;
+            charIndexA++;
+        }
+        
+    }
+    
+    function stopAnimation(){
+        clearInterval(contact_text_timer);
+        contact_text_timer = null;
+    }
+})
 //Parallax script
-let parallaxDiv = document.querySelector(".news_panel");
+let parallaxDiv = document.querySelector(".about_panel");
 window.addEventListener("scroll", () => {
     let parallaxOffset = window.pageYOffset;
-    parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.8 + "px";
+    parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.3 + "px";
 })
 
 /*let wnButton = document.querySelector(".whats_new_button");
@@ -68,14 +166,14 @@ wnButton.addEventListener('mouseleave', () => {
 })*/
 
 //News panel scripts
-let news_but = document.querySelector(".news_button");
+/*let news_but = document.querySelector(".news_button");
 
 news_but.addEventListener("mouseover", () => {
     news_but.classList.add("inverted_button")
 })
 news_but.addEventListener("mouseleave", () => {
     news_but.classList.remove("inverted_button")
-})
+})*/
 
 /*//Social div
 let nodes = document.querySelectorAll(".social_nodes")
@@ -111,6 +209,14 @@ button.addEventListener("click", () => {
 })*/
 
 //Project panel scripts.
+let titleLines = document.querySelectorAll(".project_lines")
+let proPanel = document.querySelector(".project_panel")
+proPanel.addEventListener("mouseover", () => {
+    titleLines.forEach((pline) => {
+        pline.classList.add("line_grow")
+    })
+})
+
 let clicked1 = false;
 let clicked2 = false;
 let clicked3 = false;
@@ -217,45 +323,12 @@ p6Div.addEventListener("click", () => {
     }
 })
 
-//Contact panel animations.
-let contactH = document.querySelector(".contact_header");
-let headerText = contactH.textContent;
-let splitH = headerText.split("")
-contactH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
-
-for(let i = 0; i < splitH.length; i++){
-    contactH.innerHTML += "<span>" + splitH[i] + "</span>";
-}
-
-let panel = document.querySelector(".contact_panel");
-panel.addEventListener("mouseover", () => {
-    let charIndex = 0;
-    let contact_text_timer = setInterval(keystroke, 200);
-    function keystroke(){
-        let span = contactH.querySelectorAll("span")[charIndex];
-        span.classList.add("appear");
-    
-        charIndex++;
-        
-        if(charIndex === splitH.length){
-            stopAnimation();
-            let line = document.querySelector(".contact_break");
-            line.classList.add("line_grow")
-            return;
-        }
-    }
-    
-    function stopAnimation(){
-        clearInterval(contact_text_timer);
-        contact_text_timer = null;
-    }
-})
 
 //rb2k Services scripts.
-let service_but = document.querySelector(".services_button");
+/*let service_but = document.querySelector(".services_button");
 service_but.addEventListener("mouseover", () => {
     service_but.classList.add("inverted_button")
 })
 service_but.addEventListener("mouseleave", () => {
     service_but.classList.remove("inverted_button")
-})
+})*/

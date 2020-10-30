@@ -1,10 +1,11 @@
+//Landing scripts.
 let flair = document.querySelector('#flair_text')
 let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", 
-"Enthusiastic", "Tireless", "Insightful", "Decisive"]
+"Enthusiastic", "Tireless", "Insightful", "Decisive", "Driven"]
 let randomFlair =  flairArray[Math.floor(Math.random() * flairArray.length)]
 let flairTimer = setInterval(flairTransition, 5000)
 
-//Header scripts
+//Header scripts.
 let navLink = document.querySelectorAll('.header_nav_links')
 let rb2kblock = document.querySelector('.rb2k')
 let rb2kLines = document.querySelectorAll('#rb2k_lines')

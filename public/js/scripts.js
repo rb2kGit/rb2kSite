@@ -346,13 +346,15 @@ let serv_vLines = document.querySelectorAll('.vertical');
 let serv_hLines = document.querySelectorAll('.horizontal');
 
 function animateLines(vLines, hLines){
-    vLines.forEach((item) => {
-        item.classList.add('inner_line_grow')
-        
-    })
-    hLines.forEach((item) => {
-        item.classList.add('inner_line_grow')
-        
+    document.addEventListener("scroll", () =>{
+        vLines.forEach((item) => {
+            item.classList.add('inner_line_grow')
+            
+        })
+        hLines.forEach((item) => {
+            item.classList.add('inner_line_grow')
+            
+        })
     })
 }
 

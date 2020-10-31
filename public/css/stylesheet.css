@@ -10,7 +10,7 @@ a{
     text-decoration: none;
 }
 footer{
-    margin: 25px 0 0 0;
+    margin: 0;
     padding: 0;
     height: 50px;
     overflow: hidden;
@@ -31,7 +31,7 @@ footer{
     width: 100%;
     height: 50px;
     position: fixed;
-    z-index: 5;
+    z-index: 6;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +57,7 @@ footer{
     display: none;
 }
 #logo_lines{
-    margin: 0;
+    margin: 0 0 0 auto;
 }
 .name_header{
     margin: 0 0 0 10px;
@@ -94,7 +94,7 @@ footer{
 }
 .hovered_lines{
     opacity: 1;
-    width: 80%;
+    width: 85%;
 }
 .header_nav_links{
     margin: 0 0 0 30px;
@@ -104,6 +104,7 @@ footer{
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+    letter-spacing: 3px;
 }
 .logo_nav_link{
     margin: 0 0 0 0;
@@ -125,11 +126,11 @@ footer{
 .mobile_nav{
     position: fixed;
     width: 100%;
-    height: 95%;
+    height: 100%;
     bottom: 0vh;
     right: 0px;
     background-color: #40a8c4;
-    z-index: 6;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
@@ -352,7 +353,7 @@ footer{
 }
 .about_text_div{
     margin: 0 auto 0 0;
-    width: 50%;
+    width: 60%;
     transform: translateX(-150%);
     transition: all 1s ease;
 }
@@ -362,7 +363,7 @@ footer{
 .about_text{
     position: relative;
     font-family: 'Lora', serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 .contact_break{
     border: solid 1px white;
@@ -455,6 +456,7 @@ footer{
 /*Projects CSS*/
 .project_panel{
     height: 800px;
+    background-color: #53b592;
 }
 .p4_grid_container{
     display: grid;
@@ -473,8 +475,8 @@ footer{
     grid-area: projectT;
     background-color: #53b592;
     box-sizing: border-box;
-    -webkit-filter: drop-shadow(10px 10px 10px #222222);
-    filter: drop-shadow(10px 10px 10px #222222);
+    /*-webkit-filter: drop-shadow(10px 10px 10px #222222);
+    filter: drop-shadow(10px 10px 10px #222222);*/
 }
 .project_title_container{
     width: 100%;
@@ -508,6 +510,7 @@ footer{
 .project_lines{
     position: absolute;
     border: solid 1px white;
+    right: 0px;
     margin: 20px 2% 20px 2%;
     width: 0%;
     transition: all 1s ease;
@@ -517,6 +520,8 @@ footer{
 }
 .bottom{
     bottom: 0px;
+    margin-bottom: 0;
+    z-index: 2;
 }
 .p4_grid_element1{
     grid-area: project1;
@@ -670,7 +675,7 @@ footer{
 .p4_grid_element6{
     grid-area: project6;
     background-image: url(/images/fbird_image.png);
-    background-position:  left top;
+    background-position: 10% 0;
     background-size: cover;
     margin: 16px 16px 16px 8px;
     cursor: pointer;
@@ -724,7 +729,7 @@ footer{
 .grid_header_div{
     width: 90%;
     position: absolute;
-    margin: 10px;
+    margin: 15px;
 }
 .grid_header{
     color: #f4ebc1;
@@ -780,18 +785,17 @@ footer{
     bottom: 0px;
 }
 #fbird_header{
-    bottom: 0px;
+    bottom: 25px;
 }
 
 /*Project Info Page CSS*/
 .project_info_bod{
-    background-color: #f5f5f5;
+    background-color: #dce5e8;
 }
 .inner_banner{
     width: 100%;
     height: 500px;
     position: relative;
-    border-bottom: solid 1px white;
 }
 .inner_banner.service_banner{
     background-image: url('/images/rb2k_banner_dark.png');
@@ -841,6 +845,9 @@ footer{
     flex-direction: row;
     width: 80%;
     margin: 100px auto 0 auto;
+}
+#bottom_container{
+    margin-bottom: 50px;
 }
 .inner_image_section{
     box-sizing: border-box;
@@ -1139,7 +1146,7 @@ footer{
 .social_header_text{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
 }
 .social_links{
@@ -1165,7 +1172,7 @@ footer{
     margin: 0 5px 0 5px;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: normal;
     text-align: right;
 }
@@ -1174,6 +1181,9 @@ footer{
 
 @media screen and (max-width: 1024px){
     /*Nav Header*/
+    .header_nav{
+        height: 40px;
+    }
     .nav_links_container{
         width: initial;
     }
@@ -1361,35 +1371,89 @@ footer{
     }
 
     /*Inner pages.*/
+    .inner_banner{
+        width: 100%;
+        height: 300px;
+        position: relative;
+        border-bottom: solid 1px white;
+    }
+    .inner_banner.service_banner{
+        background-image: url('/images/rb2k_banner_dark.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 55% 60%;
+    
+    }
+    .inner_header_container{
+        padding: 0 0 0 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .inner_overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        background-color: black;
+        opacity: 0.25;
+    }
+    .inner_header{
+        font-size: 36px;
+        width: 100%;
+        text-align: center;
+    }
     .inner_section_container:nth-child(even){
         display: flex;
         flex-direction: column-reverse;
         width: 90%;
-        margin: auto 5% 0 auto;
-        border: solid 1px red;
+        margin: 50px 5% 0 5%;
     }
     .inner_section_container:nth-child(odd){
         display: flex;
         flex-direction: column-reverse;
         width: 90%;
-        margin: 100px auto 0 auto;
+        margin: 50px 5% 0 5%;
     }
     .inner_image_section{
         box-sizing: border-box;
         width: 100%;
-        height: 50%;
+    }
+    .inner_image{
+        position: relative;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: 100%;
+        margin: 0;
     }
     .inner_text_section{
         position: relative;
+        height: 100%;
         width: 100%;
-        height: 50%;
-        margin: 0 2% 0 2%;
-        border: solid 1px green;
+        margin: 0 0 25px 0;
     }
     .inner_text_header{
         font-size: 20px;
-        text-align: left;
-        width: 90%;
-        margin: auto auto 25px auto;
+        text-align: center;
+        width: 100%;
+    }
+    .inner_text_container{
+        position: relative;
+        top: initial;
+        transform: none;
+        margin: 10px;
+    }
+    .inner_text{
+        font-family: 'Lora', serif;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+    .inner_contact_p{
+        font-family: 'Lora', serif;
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
     }
 }

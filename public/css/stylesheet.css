@@ -1279,8 +1279,6 @@ footer{
             'project6';
         height: 1200px;
         width: 100%;
-        -webkit-filter: drop-shadow(10px 10px 10px #222222);
-        filter: drop-shadow(10px 10px 10px #222222);
     }
     .project_header_container{
         left: 25%;

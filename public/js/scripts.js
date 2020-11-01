@@ -2,19 +2,17 @@
 let flair = document.querySelector('#flair_text')
 let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", 
 "Enthusiastic", "Tireless", "Insightful", "Decisive", "Driven"]
-let randomFlair =  flairArray[Math.floor(Math.random() * flairArray.length)]
+let randomFlair = flairArray[Math.floor(Math.random() * flairArray.length)];
 let flairTimer = setInterval(flairTransition, 5000)
 
 function flairInit(){
     flair.classList.add('flair_unfade');
     randomFlair = flairArray[Math.floor(Math.random() * flairArray.length)]
-    return randomFlair
+    flair.innerHTML = randomFlair;
+    return randomFlair;
 }
-
-if(flair != undefined){
-    flairInit;
-    
-    function flairTransition(){
+function flairTransition(){
+    if(flair != null){
         flair.classList.remove('flair_fade')
         flair.classList.remove('flair_unfade')
         flair.classList.add('flair_fade')
@@ -27,6 +25,11 @@ if(flair != undefined){
             flair.innerHTML = randomFlair
         }, 1000)
     }
+}
+
+if(flair != null){
+    flairInit();
+    
     
     flair.addEventListener('click', () => {
         flairTransition()
@@ -267,13 +270,13 @@ if(flair != undefined){
             clicked6 = true;
         }
     })
-
 }
-
 //Header scripts.
 let navLink = document.querySelectorAll('.header_nav_links')
 let rb2kblock = document.querySelector('.rb2k')
 let rb2kLines = document.querySelectorAll('#rb2k_lines')
+let contactBlock = document.querySelector('.contact')
+let contactLines = document.querySelectorAll('#contact_lines')
 let problock = document.querySelector('.project')
 let prolines = document.querySelectorAll('#project_lines')
 let logodiv = document.querySelector('.logo_div')
@@ -287,9 +290,6 @@ navLink.forEach((item) => {
     })
     item.addEventListener('mouseleave', () => {
         item.classList.remove('hovered_nav_item')
-        rb2kLines.forEach((line) => {
-            line.classList.remove('hovered_lines')
-        })
     })
 })
 rb2kblock.addEventListener("mouseover", () => {
@@ -300,6 +300,16 @@ rb2kblock.addEventListener("mouseover", () => {
 rb2kblock.addEventListener("mouseleave", () => {
     rb2kLines.forEach((line) => {
         line.classList.remove('hovered_lines')
+    })
+})
+contactBlock.addEventListener("mouseover", () => {
+    contactLines.forEach((cline) => {
+        cline.classList.add('hovered_lines')
+    })
+})
+contactBlock.addEventListener("mouseleave", () => {
+    contactLines.forEach((cline) => {
+        cline.classList.remove('hovered_lines')
     })
 })
 problock.addEventListener("mouseover", () => {

@@ -30,6 +30,9 @@ app.use(session({
 app.get("/", (req, res) => {
     res.render("index")
 })
+app.get("/contactPage", (req, res) => {
+    res.render("contact")
+})
 app.get("/rb2ksite", (req, res) => {
     res.render("rb2ksite_page")
 })

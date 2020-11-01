@@ -14,7 +14,7 @@ footer{
     padding: 0;
     height: 50px;
     overflow: hidden;
-    background-color: #40a8c4;
+    background-color: #1f6f8b;
     -webkit-filter: drop-shadow(10px 10px 10px black);
     filter: drop-shadow(10px 10px 10px black);
 }
@@ -36,7 +36,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #40a8c4;
+    background-color: #1f6f8b;
     box-sizing: border-box;
 }
 .logo_div{
@@ -66,7 +66,7 @@ footer{
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 5px;
-    color: #f4ebc1;
+    color: #e6d5b8;
     text-transform: uppercase;
     font-weight: normal;
     text-decoration: none;
@@ -98,7 +98,7 @@ footer{
 }
 .header_nav_links{
     margin: 0 0 0 30px;
-    color: #f4ebc1;
+    color: #e6d5b8;
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
@@ -121,7 +121,7 @@ footer{
     width: 25px;
     height: 3px;
     margin: 3px;
-    background-color: #f4ebc1;
+    background-color: #e6d5b8;
 }
 .mobile_nav{
     position: fixed;
@@ -129,7 +129,7 @@ footer{
     height: 100%;
     bottom: 0vh;
     right: 0px;
-    background-color: #40a8c4;
+    background-color: #1f6f8b;
     z-index: 5;
     display: flex;
     flex-direction: column;
@@ -144,7 +144,7 @@ footer{
     align-items: center;
 }
 .mobile_nav_links{
-    color: #f4ebc1;
+    color: #e6d5b8;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
@@ -249,7 +249,7 @@ footer{
 }
 .news_button{
     background: none;
-    color: #f4ebc1;
+    color: #e6d5b8;
     border: solid;
     border-color: white;
     font-size: 24px;
@@ -332,9 +332,9 @@ footer{
     display: flex;
     align-items: center;
     color: white;
-    background-image: url(/images/aurora_large.jpg);
-    background-size: auto 145%;
-    background-position: top;
+    background-image: url(/images/contact_back.jpg);
+    background-position: 50%;
+    background-size: fill;
     overflow: hidden;
 }
 .about_container_div{
@@ -444,7 +444,7 @@ footer{
     z-index: 2;
 }
 .contact_link{
-    color: #f4ebc1;
+    color: #e6d5b8;
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
 }
@@ -456,7 +456,7 @@ footer{
 /*Projects CSS*/
 .project_panel{
     height: 800px;
-    background-color: #53b592;
+    background-color: #1c2b2d;
 }
 .p4_grid_container{
     display: grid;
@@ -473,7 +473,7 @@ footer{
 }
 .projectT_grid_element{
     grid-area: projectT;
-    background-color: #53b592;
+    background-color: #1c2b2d;
     box-sizing: border-box;
     /*-webkit-filter: drop-shadow(10px 10px 10px #222222);
     filter: drop-shadow(10px 10px 10px #222222);*/
@@ -732,7 +732,7 @@ footer{
     margin: 15px;
 }
 .grid_header{
-    color: #f4ebc1;
+    color: #e6d5b8;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -894,7 +894,7 @@ footer{
     margin: 0 0 0 11%;
 }
 .inner_contact_link{
-    color: #40a8c4;
+    color: #1f6f8b;
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
 }
@@ -936,9 +936,9 @@ footer{
 
 /*Contact Page*/
 .contact_page_container{
-    background-image: url(/images/contact_back.jpg);
+    background-image: url(/images/aurora_large.jpg);
     background-size: cover;
-    background-position: 0 80%;
+    background-position: center;
 }
 .contact_section_container{
     position: relative;
@@ -1039,7 +1039,7 @@ footer{
     margin: 20px; 
     padding: 10px;
     text-align: center;
-    color: #f4ebc1;
+    color: #e6d5b8;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 10px 10px 20px black;
     background: none;
@@ -1052,7 +1052,7 @@ footer{
 
 /*Element IDs*/
 #header_div{
-    background-color: #40a8c4;
+    background-color: #1f6f8b;
 }
 
 
@@ -1060,7 +1060,7 @@ footer{
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
-    background-color: #40a8c4;
+    background-color: #1f6f8b;
     /* #54acc7;*/
     height: 650px;
     /*background-color: #00ace6;*/
@@ -1075,7 +1075,7 @@ footer{
 }
 
 #flair_text{
-    color: #f4ebc1;
+    color: #e6d5b8;
     transition: all 0.5s linear;
     font-size: 60px;
     cursor: pointer;
@@ -1089,7 +1089,7 @@ footer{
 }
 .credit_link{
     text-decoration: none;
-    color:  #f4ebc1;
+    color:  #e6d5b8;
 }
 
 #landing_header{
@@ -1135,7 +1135,7 @@ footer{
 
 .whats_new_button{
     background: none;
-    color: #f4ebc1;
+    color: #e6d5b8;
     border: solid;
     border-color: white;
     font-size: 24px;
@@ -1264,7 +1264,7 @@ footer{
         font-size: 40px;
     }
     #flair_text{
-        color: #f4ebc1;
+        color: #e6d5b8;
         transition: all 0.5s linear;
         font-size: 45px;
         cursor: pointer;
@@ -1277,6 +1277,9 @@ footer{
     }
     
     /*About*/
+    .about_panel{
+        background-position: 47%;
+    }
     .about_container_div{
         width: 90%;
         margin: 100px auto 100px auto;

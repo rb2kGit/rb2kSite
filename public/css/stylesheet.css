@@ -1356,6 +1356,10 @@ footer{
     }
 
     /*Footer*/
+    .footer_container{
+        width: 85%;
+        margin: auto;
+    }
     .social_header_text{
         font-size: 12px;
     }
@@ -1366,6 +1370,9 @@ footer{
     }
     .author_div{
         display: none;
+    }
+    #twitter_link{
+        display: initial;
     }
 
     /*Inner pages.*/

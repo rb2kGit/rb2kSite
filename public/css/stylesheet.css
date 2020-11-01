@@ -73,7 +73,7 @@ footer{
 }
 .nav_links_container{
     margin: 0 10px 0 0;
-    width: 70%;
+    width: 55%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -103,7 +103,7 @@ footer{
     align-items: center;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 3px;
 }
 .logo_nav_link{
@@ -321,7 +321,7 @@ footer{
     margin: 0;
     padding: 0;
     font-family: 'Lora', serif;
-    font-size: 12px;
+    font-size: 10px;
     width: 100%;
     color: white;
 }
@@ -934,6 +934,48 @@ footer{
     width: 100%;
 }
 
+/*Contact Page*/
+.contact_page_container{
+    background-image: url(/images/contact_back.jpg);
+    background-size: cover;
+    background-position: 0 80%;
+}
+.contact_section_container{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+}
+.contact_elements_container{
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+.contact_title_div{
+    position: relative;
+}
+.contact_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    letter-spacing: 5px;
+    color: white;
+}
+.contact_page_text{
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    color: white;
+}
+.inner_overlay.cPage{
+    top: 0px;
+    transition: all 2s linear;
+}
 
 
 .contact_image_div{
@@ -1460,5 +1502,16 @@ footer{
         font-size: 20px;
         text-align: center;
         margin: 0;
+    }
+
+    /*Contact Page*/
+    .contact_page_container{
+        background-position: 50% 80%;
+    }
+    .contact_section_container{
+        width: 90%;
+    }
+    .contact_page_text{
+        font-size: 20px;
     }
 }

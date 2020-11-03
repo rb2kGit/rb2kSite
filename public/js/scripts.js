@@ -1,9 +1,14 @@
-//Landing scripts.
+/*Landing scripts.*/
 let flair = document.querySelector('#flair_text')
 let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "Fun", "Smart", "Sharp", "Able", "Astute", "Energetic", "Engaging", "Passionate", 
 "Enthusiastic", "Tireless", "Insightful", "Decisive", "Driven"]
 let randomFlair = flairArray[Math.floor(Math.random() * flairArray.length)];
 let flairTimer = setInterval(flairTransition, 5000)
+//About section declarations.
+let contactH = document.querySelector(".contact_header");
+let aboutH = document.querySelector(".about_header");
+//Project section declarations.
+let titleLines = document.querySelectorAll(".project_lines")
 
 function flairInit(){
     flair.classList.add('flair_unfade');
@@ -39,11 +44,9 @@ if(flair != null){
 
     //About panel scripts
     //Contact panel animations.
-    let contactH = document.querySelector(".contact_header");
     let headerText = contactH.textContent;
     let splitH = headerText.split("")
     contactH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
-    let aboutH = document.querySelector(".about_header");
     let aheaderText = aboutH.textContent;
     let splitAH = aheaderText.split("")
     aboutH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
@@ -104,60 +107,7 @@ if(flair != null){
         parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.3 + "px";
     })
 
-    /*let wnButton = document.querySelector(".whats_new_button");
-
-    wnButton.addEventListener('mouseover', () => {
-        wnButton.classList.add('inverted_button')
-    })
-    wnButton.addEventListener('mouseleave', () => {
-        wnButton.classList.remove('inverted_button')
-    })*/
-
-    //News panel scripts
-    /*let news_but = document.querySelector(".news_button");
-
-    news_but.addEventListener("mouseover", () => {
-        news_but.classList.add("inverted_button")
-    })
-    news_but.addEventListener("mouseleave", () => {
-        news_but.classList.remove("inverted_button")
-    })*/
-
-    /*//Social div
-    let nodes = document.querySelectorAll(".social_nodes")
-    let socialGrid = document.querySelectorAll(".social_grid_element")
-    let socialHeader = document.querySelector(".social_header_div")
-    let button = document.querySelector(".whats_new_button")
-    let buttonClicked = false;
-    let div = document.querySelector("#panel2_div")
-
-    button.addEventListener("click", () => {
-        if(buttonClicked == true){
-            var fadeinTimer = setTimeout(() =>{
-                button.classList.remove("button_clicked")
-            }, 1000)
-            socialGrid.forEach(item => {
-                item.classList.remove("flair_unfade");
-                socialHeader.classList.remove("flair_unfade");
-            })
-            buttonClicked = false;
-        }
-        else{
-            let fadeTimer = 500;
-            button.classList.add("button_clicked");
-            socialGrid.forEach(item => {
-                var fadein = setTimeout(() => {
-                    item.classList.add("flair_unfade");
-                    socialHeader.classList.add("flair_unfade");
-                }, fadeTimer)
-                fadeTimer += 250;
-            })
-            buttonClicked = true;
-        }
-    })*/
-
     //Project panel scripts.
-    let titleLines = document.querySelectorAll(".project_lines")
     let proPanel = document.querySelector(".project_panel")
     proPanel.addEventListener("mouseover", () => {
         titleLines.forEach((pline) => {
@@ -370,4 +320,25 @@ function animateLines(vLines, hLines){
 
 if(serv_vLines || serv_hlines != undefined){
     animateLines(serv_vLines, serv_hLines);
+}
+
+/*Observer API*/
+//Observer API
+let observerObject = {
+    root: null,
+    rootMarign: '0',
+    threshold: 0.75
+};
+let animatedElements = [contactH, aboutH]
+let observer = new IntersectionObserver(intersected, observerObject)
+animatedElements.forEach(item => {
+    observer.observe(item);
+})
+function intersected(elements){
+    elements.forEach(item => {
+        //item.target.classList.add(insert_class_here)
+        if(item.isIntersecting){
+            console.log("Intersection.")
+        }
+    })
 }

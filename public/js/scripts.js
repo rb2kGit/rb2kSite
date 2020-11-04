@@ -5,10 +5,11 @@ let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "
 let randomFlair = flairArray[Math.floor(Math.random() * flairArray.length)];
 let flairTimer = setInterval(flairTransition, 5000)
 //About section declarations.
+let aboutDiv = [document.querySelector(".about_info_div"), document.querySelector(".contact_block")];
 let contactH = document.querySelector(".contact_header");
 let aboutH = document.querySelector(".about_header");
 //Project section declarations.
-let titleLines = document.querySelectorAll(".project_lines")
+let titleLine = document.querySelectorAll(".project_lines")
 
 function flairInit(){
     flair.classList.add('flair_unfade');
@@ -42,29 +43,14 @@ if(flair != null){
         flairTimer = setInterval(flairTransition, 5000)
     })
 
-    //About panel scripts
-    //Contact panel animations.
-    let headerText = contactH.textContent;
-    let splitH = headerText.split("")
-    contactH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
-    let aheaderText = aboutH.textContent;
-    let splitAH = aheaderText.split("")
-    aboutH.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
+    
     let aText = document.querySelector(".about_text_div")
     let cText = document.querySelector(".contact_p_container")
 
 
-    for(let i = 0; i < splitH.length; i++){
-        contactH.innerHTML += '<span class="type_span">' + splitH[i] + '</span>';
-    }
-    for(let i = 0; i < splitAH.length; i++){
-        aboutH.innerHTML += '<span class="type_span">' + splitAH[i] + '</span>';
-    }
-
-
     let panel = document.querySelector(".about_panel");
     document.addEventListener("scroll", () => {
-        let charIndexC = 0;
+        /*let charIndexC = 0;
         let charIndexA = 0
         let contact_text_timer = setInterval(keystroke, 150);
         function keystroke(){
@@ -98,22 +84,17 @@ if(flair != null){
         function stopAnimation(){
             clearInterval(contact_text_timer);
             contact_text_timer = null;
-        }
+        }*/
     })
     //Parallax script
     let parallaxDiv = document.querySelector(".about_panel");
     window.addEventListener("scroll", () => {
         let parallaxOffset = window.pageYOffset;
-        parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.3 + "px";
+        parallaxDiv.style.backgroundPositionY = parallaxOffset * -0.35 + "px";
     })
 
     //Project panel scripts.
     let proPanel = document.querySelector(".project_panel")
-    proPanel.addEventListener("mouseover", () => {
-        titleLines.forEach((pline) => {
-            pline.classList.add("line_grow")
-        })
-    })
 
     let clicked1 = false;
     let clicked2 = false;
@@ -326,19 +307,77 @@ if(serv_vLines || serv_hlines != undefined){
 //Observer API
 let observerObject = {
     root: null,
-    rootMarign: '0',
-    threshold: 0.75
+    rootMargin: "-25% 0px",
+    threshold: 0.10
 };
-let animatedElements = [contactH, aboutH]
-let observer = new IntersectionObserver(intersected, observerObject)
-animatedElements.forEach(item => {
-    observer.observe(item);
+
+let animatedHeaders = [contactH, aboutH]
+let aboutObserver = new IntersectionObserver(intersection, observerObject)
+let lineObserver = new IntersectionObserver(lineIntersect, observerObject)
+//let headerObserver = new IntersectionObserver(intersected, observerObject)
+//let lineObserver = new IntersectionObserver(intersected, observerObject)
+
+aboutDiv.forEach(item => {
+    aboutObserver.observe(item)
 })
-function intersected(elements){
+titleLine.forEach(item => {
+    lineObserver.observe(item)
+})
+function intersection(elements){
     elements.forEach(item => {
-        //item.target.classList.add(insert_class_here)
         if(item.isIntersecting){
-            console.log("Intersection.")
+            //Header animations.
+            let header = item.target.querySelector('h2');
+            let headerText = header.textContent;
+            let splitH = headerText.split("")
+            let line = item.target.querySelector('.contact_break');
+            let text = item.target.querySelectorAll('.anim');
+            console.log(text)
+            let charIndex = 0;
+    
+            header.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
+            header.classList.add('appear')
+            
+            for(let i = 0; i < splitH.length; i++){
+                header.innerHTML += '<span class="type_span">' + splitH[i] + '</span>'; //Generate an array of spans to replace the header.
+            }        
+            
+            let contact_text_timer = setInterval(keystrokeAnim, 150);
+            function keystrokeAnim(){
+                let span = header.querySelectorAll("span")[charIndex];
+                //let aspan = aboutH.querySelectorAll("span")[charIndexA];        
+                
+                if(charIndex === splitH.length){
+                    stopAnimation();
+                    line.classList.add('line_grow')
+                    text.forEach(item => {
+                        item.classList.add('drop_down')
+                    })
+                    return;
+                }
+                else{
+                    span.classList.add('appear')
+                    charIndex++;
+                }
+                
+            }
+            function stopAnimation(){
+                clearInterval(contact_text_timer);
+                contact_text_timer = null;
+                aboutObserver.unobserve(item.target)
+            }
+        }
+
+    })
+}
+function lineIntersect(elements){
+    elements.forEach(item => {
+        if(item.isIntersecting){
+            let lines = item.target;
+            console.log(lines)
+            lines.classList.add('line_grow')
+            lineObserver.unobserve(item.target)
+
         }
     })
 }

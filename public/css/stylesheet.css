@@ -1,5 +1,5 @@
 .project{
-    pointer-events: none;
+    pointer-events: all;
 }
 body{
     margin: 0px;
@@ -103,7 +103,7 @@ footer{
     align-items: center;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 3px;
 }
 .logo_nav_link{
@@ -333,7 +333,7 @@ footer{
     align-items: center;
     color: white;
     background-image: url(/images/contact_back.jpg);
-    background-position: 50%;
+    background-position: 50% 0%;
     background-size: fill;
     overflow: hidden;
 }
@@ -350,6 +350,10 @@ footer{
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     text-align: left;
+    opacity: 0;
+}
+.appear{
+    opacity: 1;
 }
 .about_text_div{
     margin: 0 auto 0 0;
@@ -418,13 +422,17 @@ footer{
     font-size: 36px;
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 0 auto;
+    opacity: 0;
+}
+.contact_header.appear{
+    opacity: 1;
 }
 .contact_p_container{
     margin: 0 0 0 auto;
     transform: translateX(150%);
     transition: all 1s ease;
 }
-.contact_p_container.slide_in{
+.contact_p_container.drop_down{
     transform: translateX(0%)
 }
 .contact_social{
@@ -520,6 +528,7 @@ footer{
 }
 .bottom{
     bottom: 0px;
+    width: 96%;
     margin-bottom: 0;
     z-index: 2;
 }
@@ -804,6 +813,13 @@ footer{
     background-position: 0 40%;
 
 }
+.inner_banner.projects_banner{
+    background-image: url('/images/code_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+
+}
 .inner_header_container{
     position: relative;
     transform: translateY(-50%);
@@ -812,6 +828,18 @@ footer{
     height: 33%;
     top: 50%;
     padding: 0 0 0 25%;
+    border: solid 1px white;
+    border-left: none;
+    border-right: none;
+}
+.inner_header_container.projects_header{
+    position: relative;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 100%;
+    height: 33%;
+    top: 50%;
+    padding: 0 0 0 45%;
     border: solid 1px white;
     border-left: none;
     border-right: none;

@@ -33,6 +33,9 @@ app.get("/", (req, res) => {
 app.get("/contactPage", (req, res) => {
     res.render("contact")
 })
+app.get("/projectPage", (req, res) => {
+    res.render('projects_page')
+})
 app.get("/rb2ksite", (req, res) => {
     res.render("rb2ksite_page")
 })

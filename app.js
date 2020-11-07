@@ -27,7 +27,7 @@ app.use(session({
 }))
 
 let metaObj = {
-    title: 'AS Portfolio',
+    title: 'A.S. Portfolio',
     desc: 'A portfolio website for a programmer and entrepreneur based in Toronto.',
     keywords: 'Portfolio, Arby, Arber, Shpiragu'
 }

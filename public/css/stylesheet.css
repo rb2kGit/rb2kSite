@@ -1127,18 +1127,30 @@ footer{
 }
 
 #intro_text_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-align: left;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     position: absolute;
     color: white;
-    top: 35%;
+    top: 50%;
     left: 15%;
 }
-
+.flair_container{
+    display: inline;
+    margin: 0 0 0 15px;
+}
 #flair_text{
     color: #e6d5b8;
     transition: all 0.5s linear;
     font-size: 60px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+#flair_text.hovered_nav_item{
+    color: white;
 }
 .flair_fade{
     opacity: 0;
@@ -1151,11 +1163,14 @@ footer{
     text-decoration: none;
     color:  #e6d5b8;
 }
-
+.text_con{
+    white-space: nowrap;
+}
 #landing_header{
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     text-decoration: none;
+    width: 100%;
 }
 
 #intro_image_div{

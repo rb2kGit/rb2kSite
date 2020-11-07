@@ -4,6 +4,12 @@ let flairArray = ["Dynamic", "Kind", "Ambitious", "Determined", "Responsible", "
 "Enthusiastic", "Tireless", "Insightful", "Decisive", "Driven"]
 let randomFlair = flairArray[Math.floor(Math.random() * flairArray.length)];
 let flairTimer = setInterval(flairTransition, 5000)
+flair.addEventListener('mouseover', () => {
+    flair.classList.add('hovered_nav_item')
+})
+flair.addEventListener('mouseleave', () => {
+    flair.classList.remove('hovered_nav_item')
+})
 //About section declarations.
 let aboutDiv = [document.querySelector(".about_info_div"), document.querySelector(".contact_block")];
 let contactH = document.querySelector(".contact_header");

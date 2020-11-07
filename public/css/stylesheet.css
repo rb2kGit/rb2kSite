@@ -1285,6 +1285,7 @@ footer{
     /*Nav Header*/
     .header_nav{
         height: 40px;
+        display: none;
     }
     .nav_links_container{
         width: initial;

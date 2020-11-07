@@ -29,7 +29,7 @@ app.use(session({
 let metaObj = {
     title: 'AS Portfolio',
     desc: 'A portfolio website for a programmer and entrepreneur based in Toronto.',
-    keywords: 'HTML, CSS, Javascript, Node.js, Express, Handlebars.'
+    keywords: 'Portfolio, Arby, Arber, Shpiragu'
 }
 
 //Routes

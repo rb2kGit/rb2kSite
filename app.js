@@ -8,7 +8,7 @@ const randomstr = require("randomstring")
 const session = require("client-sessions");
 
 //App declarations.
-app.engine("handlebars", expressHB({defaultLayout: 'default'}))
+app.engine("handlebars", expressHB({defaultLayout: 'default', layoutsDir: __dirname + '/views/layouts',}))
 app.set("view engine", "handlebars")
 app.use(express.static(path.join(__dirname, "/public")))
 app.use(bodyParser.urlencoded({extended: false}))
@@ -26,33 +26,23 @@ app.use(session({
     ephemeral: true
 }))
 
+let metaObj = {
+    title: 'AS Portfolio',
+    desc: 'A portfolio website for a programmer and entrepreneur based in Toronto.',
+    keywords: 'HTML, CSS, Javascript, Node.js, Express, Handlebars.'
+}
+
 //Routes
 app.get("/", (req, res) => {
-    res.render("index")
+    res.render("index", {
+        metaObj
+    })
 })
 app.get("/contactPage", (req, res) => {
     res.render("contact")
 })
 app.get("/projectPage", (req, res) => {
     res.render('projects_page')
-})
-app.get("/rb2ksite", (req, res) => {
-    res.render("rb2ksite_page")
-})
-app.get("/pongsite", (req, res) => {
-    res.render("pong_page")
-})
-app.get("/leaguesite", (req, res) => {
-    res.render("league_page")
-})
-app.get("/javasite", (req, res) => {
-    res.render("java_page")
-})
-app.get("/csite", (req, res) => {
-    res.render("c_page")
-})
-app.get("/flappysite", (req, res) => {
-    res.render("flappy_page")
 })
 app.get("/servicesite", (req, res) => {
     res.render("services_page")

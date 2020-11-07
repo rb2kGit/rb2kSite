@@ -50,41 +50,6 @@ if(flair != null){
 
     let panel = document.querySelector(".about_panel");
     document.addEventListener("scroll", () => {
-        /*let charIndexC = 0;
-        let charIndexA = 0
-        let contact_text_timer = setInterval(keystroke, 150);
-        function keystroke(){
-            let cspan = contactH.querySelectorAll("span")[charIndexC];
-            let aspan = aboutH.querySelectorAll("span")[charIndexA];
-            
-            
-            if(charIndexC === splitH.length){
-                stopAnimation();
-                let lines = document.querySelectorAll(".contact_break");
-                cText.classList.add("slide_in")
-                lines.forEach((line) => {
-                    line.classList.add("line_grow")
-                })
-                return;
-            }
-            else if (charIndexA === splitAH.length){
-                cspan.classList.add("appear");
-                charIndexC++;
-                aText.classList.add("drop_down")
-            }
-            else{
-                aspan.classList.add("appear");
-                cspan.classList.add("appear");
-                charIndexC++;
-                charIndexA++;
-            }
-            
-        }
-        
-        function stopAnimation(){
-            clearInterval(contact_text_timer);
-            contact_text_timer = null;
-        }*/
     })
     //Parallax script
     let parallaxDiv = document.querySelector(".about_panel");
@@ -165,30 +130,6 @@ if(flair != null){
             clicked3 = true;
         }
     })
-    /*p4Div.addEventListener("click", () => {
-        if(clicked4){
-            hidden4.classList.remove("overlay_reveal")
-            items4.classList.remove("items_reveal")
-            clicked4 = false
-        }
-        else{
-            hidden4.classList.add("overlay_reveal")
-            items4.classList.add("items_reveal")
-            clicked4 = true;
-        }
-    })
-    p5Div.addEventListener("click", () => {
-        if(clicked5){
-            hidden5.classList.remove("overlay_reveal")
-            items5.classList.remove("items_reveal")
-            clicked5 = false
-        }
-        else{
-            hidden5.classList.add("overlay_reveal")
-            items5.classList.add("items_reveal")
-            clicked5 = true;
-        }
-    })*/
     p6Div.addEventListener("click", () => {
         if(clicked6){
             hidden6.classList.remove("overlay_reveal")
@@ -271,17 +212,6 @@ burger.addEventListener("click", () => {
 
 
 
-
-
-//rb2k Services scripts.
-/*let service_but = document.querySelector(".services_button");
-service_but.addEventListener("mouseover", () => {
-    service_but.classList.add("inverted_button")
-})
-service_but.addEventListener("mouseleave", () => {
-    service_but.classList.remove("inverted_button")
-})*/
-
 //Service page scripts.
 let serv_vLines = document.querySelectorAll('.vertical');
 let serv_hLines = document.querySelectorAll('.horizontal');
@@ -332,7 +262,6 @@ function intersection(elements){
             let splitH = headerText.split("")
             let line = item.target.querySelector('.contact_break');
             let text = item.target.querySelectorAll('.anim');
-            console.log(text)
             let charIndex = 0;
     
             header.textContent = ""; //Since I pulled the text out of the header and split it up, I will erase whats there and repopulate it.
@@ -374,7 +303,6 @@ function lineIntersect(elements){
     elements.forEach(item => {
         if(item.isIntersecting){
             let lines = item.target;
-            console.log(lines)
             lines.classList.add('line_grow')
             lineObserver.unobserve(item.target)
 
